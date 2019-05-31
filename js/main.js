@@ -1,27 +1,19 @@
-
 /* --------------------------------------------------------
  JQUERY FUNCTION CALL
 ----------------------------------------------------------- */
-(function ($) {
- "use strict";
-	
+(function($) {
+  "use strict";
 
+  // -------- Sidebar
+  $("body").delegate(".headerMobile_menuHamb button", "click", function() {
+    var thisCheck = $(this).parents(".c-mainContainer");
+    thisCheck.hasClass("st-openMenu")
+      ? thisCheck.removeClass("st-openMenu")
+      : thisCheck.addClass("st-openMenu");
+  });
 
-	// -------- Filter
-	$('body').delegate('.ts-navMobile .btn','click',function(){
-		var thisCheck = $(this).parents('.ts-header'); 
-		if(thisCheck.hasClass('st--menuOpen')){
-			thisCheck.removeClass('st--menuOpen');
-		}else{
-			thisCheck.addClass('st--menuOpen');
-		}
-	});
-
-	$('body').delegate('.hideSearch','click',function(){
-		var thisCheck = $(this).parents('.ts-header');
-			thisCheck.removeClass('st--menuOpen');
-	});
-
-	
-	
+  $("body").delegate(".c-sidebar .closeMenu", "click", function() {
+    var thisCheck = $(this).parents(".c-mainContainer");
+    thisCheck.removeClass("st-openMenu");
+  });
 })(jQuery);

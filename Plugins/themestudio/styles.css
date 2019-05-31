@@ -98,3 +98,15 @@
 .ts-phone:before {
   content: "\74";
 }
+.ts-facebook-squared:before {
+  content: "\75";
+}
+.ts-instagram-logo:before {
+  content: "\76";
+}
+.ts-linkedin-square:before {
+  content: "\77";
+}
+.ts-email-envelope:before {
+  content: "\78";
+}
