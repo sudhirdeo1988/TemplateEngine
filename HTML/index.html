@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/fav.png" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <link
       rel="stylesheet/less"
@@ -41,13 +42,13 @@
         <!-- ** Menu Container ** -->
         <div class="menuContainer">
           <ul>
-            <li><a href="#">The Academy</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">OUR MISSION</a></li>
-            <li><a href="#">Who are we</a></li>
-            <li><a href="#">Cleverclassroom</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#" class="highLight">Enquire Now</a></li>
+            <li class="st-active"><a href="#linkAcademy">The Academy</a></li>
+            <li><a href="#linkCourses">Courses</a></li>
+            <li><a href="#linkMission">OUR MISSION</a></li>
+            <li><a href="#linkAboutUs">Who are we</a></li>
+            <li><a href="#linkCleverClassroom">Cleverclassroom</a></li>
+            <li><a href="#linkContact">Contact us</a></li>
+            <li><a href="#linkEnquire" class="highLight">Enquire Now</a></li>
           </ul>
         </div>
         <!-- ** Menu Container  End ** -->
@@ -64,14 +65,21 @@
         <!-- ** Social Links ** -->
         <div class="c-socialLinks">
           <ul>
-            <li><a href="#" class="socLink"><i class="icon ts-facebook"></i></a></li>
-            <li><a href="#" class="socLink"><i class="icon ts-instagram"></i></a></li>
-            <li><a href="#" class="socLink"><i class="icon ts-linkedin"></i></a></li>
-            <li><a href="#" class="socLink"><i class="icon ts-email"></i></a></li>
+            <li>
+              <a href="#" class="socLink"><i class="icon ts-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" class="socLink"><i class="icon ts-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" class="socLink"><i class="icon ts-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#" class="socLink"><i class="icon ts-email"></i></a>
+            </li>
           </ul>
         </div>
         <!-- ** Social Links End ** -->
-
       </div>
       <!-- ****** Sidebar End ******** -->
 
@@ -100,7 +108,7 @@
         <!-- ******** Banner Image End ******** -->
 
         <!-- ******** Info Container :: Page Heading ******** -->
-        <div class="c-infoContainer page-heading">
+        <div class="c-infoContainer page-heading" id="linkAcademy">
           <h1 class="headingPrimary">ABC Academy</h1>
           <h3 class="headingSecondary">Be prepared to achieve</h3>
           <p class="staticText">
@@ -121,7 +129,7 @@
         <!-- ******** Info Container :: Page Heading End ******** -->
 
         <!-- ******** Info Container :: Courses ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkCourses">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -159,7 +167,7 @@
         <!-- ******** Info Container :: Courses End ******** -->
 
         <!-- ******** Info Container :: Our Mission ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkMission">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -210,7 +218,7 @@
         <!-- ******** Info Container :: Our Mission End ******** -->
 
         <!-- ******** Info Container :: Who are we ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkAboutUs">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -267,7 +275,7 @@
         <!-- ******** Info Container :: Who are we End ******** -->
 
         <!-- ******** Info Container :: CleverClassroom ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkCleverClassroom">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -377,7 +385,7 @@
         <!-- ******** Info Container :: CleverClassroom End ******** -->
 
         <!-- ******** Info Container :: Contact Us ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkContact">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -421,7 +429,14 @@
 
               <!-- ** User List ** -->
               <div class="col-md-5 col-sm-12">
-                <div class="c-googleMap"></div>
+                <div class="c-googleMap">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.069975996142!2d72.84097231500282!3d19.148413987046446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b636562a555b%3A0x7031da5008626ae7!2sOshiwara+Bridge!5e0!3m2!1sen!2sin!4v1559420868800!5m2!1sen!2sin"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
               <!-- ** User List End ** -->
             </div>
@@ -432,7 +447,7 @@
         <!-- ******** Info Container :: Contact Us End ******** -->
 
         <!-- ******** Info Container :: Enquire Now ******** -->
-        <div class="c-infoContainer">
+        <div class="c-infoContainer" id="linkEnquire">
           <!-- ** Heading ** -->
           <div class="infoheading">
             <div class="infoheading_title">
@@ -511,15 +526,13 @@
           </div>
         </div>
         <!-- ******** Info Container :: Footer End ******** -->
-
       </div>
       <!-- ****** Body Container End ******** -->
     </div>
     <!-- *************** Main Wrapper End *************** -->
 
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <script src="../js/less.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>
