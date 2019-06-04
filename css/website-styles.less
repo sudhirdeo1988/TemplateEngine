@@ -316,12 +316,16 @@ body {
 	.box-shadow(0 4px 8px 0 rgba(0,0,0,0.1));
 
 		.btnImage{
-			background-color: @primaryColor;
 			height: 28px;
 			width: 28px;
 			.valign-middle;
 			.inlineblock;
 			.margin15-right;
+
+				img{
+					max-height: 28px;
+					.block;
+				}
 		}
 		.btnText{
 			color: @fontColor;
@@ -414,7 +418,7 @@ body {
 	width: 330px;
 	left: 0;
 	top: 0;
-	padding: 42px 0;
+	padding: 0 0 42px;
 	z-index: 99;
 	.height100;
 	.transition(all ease 0.3s);
@@ -444,13 +448,13 @@ body {
 
 		// ---------- Logo Container
 		.logoContainer{
-			margin-bottom: 42px;
+			margin: 42px 0;
 			.relative;
 			.text-center;
 
 				.logoImage{
 					height: 69px;
-					width: 80px;
+					width: 100%;
 					.center;
 					.text-center;
 					.relative;
@@ -750,6 +754,17 @@ body {
 	.relative;
 
 		&.page-heading{margin-bottom: 120px;}
+		&.bg__image{
+			background-position: 155%;
+			background-repeat: no-repeat;
+
+				&.col_yellow{
+					background-image: url('../images/yellow_bg.svg');
+				}
+				&.col_red{
+					background-image: url('../images/red_bg.svg');
+				}
+		}
 
 		// ---------- Container Heading
 		.infoheading{
@@ -979,8 +994,8 @@ body {
 						width: 100px;
 
 							img{
-								height: 100px;
-								width: 100px;
+								height: 80px;
+								width: 80px;
 							}
 					}
 
@@ -1072,10 +1087,12 @@ body {
 							.inlineblock;
 							.nopad;
 							.nomargin;
+							.valign-middle;
 								span{
 									color: #981C1E;
 									.bold;
 									.inlineblock;
+									.left;
 										&.color-2{
 											color: #FFCC01
 										}
