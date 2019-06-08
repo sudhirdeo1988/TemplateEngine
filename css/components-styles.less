@@ -133,7 +133,7 @@ font-family: 'Roboto Condensed', sans-serif;
 			3.Utilities and setting variables
 	---------------------------------------------------- */
 	.fontPrimary_body{
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-weight: 400;
 	}
 	.fontPrimary_heading{
@@ -146,7 +146,7 @@ font-family: 'Roboto Condensed', sans-serif;
 	.hide { display:none; }.novis { visibility: hidden; }.block { display:block; }.inlineblock { display:inline-block; }
 	.inline { display:inline; }.display-table { display:table; }
 	.text-center{text-align: center;}.text-left{text-align: left;}.text-right{text-align: right;}
-	.bold{font-weight: 600;}.text-uppercase{text-transform: uppercase;}
+	.semiBold{font-weight: 500;}.bold{font-weight: 600;}.text-uppercase{text-transform: uppercase;}
 
 	.font-8 { font-size:8px; }   .font-10 { font-size:10px; } .font-12 { font-size:12px; }
 	.font-14 { font-size:14px; } .font-16 { font-size:16px; }	.font-18 { font-size:18px; }
@@ -186,6 +186,12 @@ font-family: 'Roboto Condensed', sans-serif;
 
 	.margin0-left { margin-left: 0; } .margin5-left { margin-left:5px; } .margin10-left { margin-left:10px; }
 	.margin15-left { margin-left:15px; } .margin20-left { margin-left:20px; }
+
+	.for-mobile{.hide;}
+	@media only screen and (max-width: 768px) {
+		.for-mobile{.block;}
+		.for-desktop{.hide !important;}
+	}
 
 	.rounded-corners (@arguments) {
 		-webkit-border-radius: @arguments;
@@ -250,6 +256,11 @@ body {
 	.nopad;
 }
 
+.divider {
+  margin: 25px 0;
+  border: 1px solid #dadada;
+}
+
 /* ------------------------------
 4. Buttons Styles
 ---------------------------------*/
@@ -274,7 +285,7 @@ body {
   background-color: transparent;
   letter-spacing: 0.18px;
   line-height: 13px;
-  color: @fontColor;
+  color: @white;
   padding: 8px 12px;
   height: 35px;
   outline: 0;
@@ -314,94 +325,22 @@ body {
     line-height: 17px;
     padding: 6px 12px;
     height: 29px;
-  }
+	}
+	.btnPrimary__menu {
+    height: 25px;
+    width: 25px;
+    font-size: 26px;
+		line-height: 20px;
+			.icon {
+				color: @primaryColor;
+				line-height: 19px;
+		}
+	}
 }
 
 /* -----------------------------------------------------------
 $$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
 -------------------------------------------------------------- */
-
-.ts-navPopover {
-	.block;
-	.relative;
-
-		.navPopover {
-			background-color: @secondaryColor;
-			top: -43px;
-			right: 0;
-			width: 350px;
-			padding: 0 40px;
-			max-height: 0;
-			overflow: hidden;
-			.absolute;
-			.hide;
-			.rounded-corners(all ease 0.3s);
-
-			.closePopover {
-				margin-bottom: 30px;
-				height: 30px;
-				.width100;
-				.text-right;
-				.block;
-
-					button {
-						background-color: transparent;
-						color: @fontColor;
-						font-size: 30px;
-						height: 30px;
-						width: 30px;
-						line-height: 35px;
-						content: "";
-						font-family: themestudio;
-						outline: none;
-						.inlineblock;
-						.text-center;
-						.nopad;
-						.noborder;
-
-							&:before {
-								content: "\66";
-							}
-					}
-			}
-
-			ul {
-				.block;
-				.nomargin;
-				.nopad;
-
-					li {
-						list-style: none;
-						margin-bottom: 40px;
-						.block;
-
-							&:last-child {
-								.margin0-bottom;
-							}
-							a {
-								color: @fontColor;
-								letter-spacing: 2.49px;
-								line-height: 24px;
-								outline: none;
-								.block;
-								.text-left;
-								.text-uppercase;
-								.nopad;
-								.font-18;
-								.bold;
-							}
-					}
-			}
-		}
-		&.st-open{
-			.navPopover {
-				max-height: 500px;
-				padding: 40px;
-				.block;
-			}
-		}
-}
-
 
 /* --------------------------------
 	5.1 Header Top
@@ -449,7 +388,8 @@ $$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
 
 @media only screen and (max-width: 768px) {
   .ts-headerTop {
-		height: 49px;
+		height: auto;
+		.text-center;
 			.ts-headNavTop{
 				ul{
 					li{
@@ -532,12 +472,17 @@ $$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
 					.bold;
 						&.sub{
 							.font-18;
-							.bold;
+							.semiBold;
 							.margin0-bottom;
 						}
 				}
 		}
 
+	}
+	.ts-mobileMenu{
+		.closePopover {
+			.hide;
+		}
 	}
 
 	.ts-navMobile{
@@ -569,15 +514,16 @@ $$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
 			}
 		}
 
+		.btnPrimary__menu{
+			.icon{
+				color: @white;
+			}
+		}
 		.ts-navMobile{
 			.inlineblock;
-
-			.btnPrimary__menu{
-				height: 25px;
-				width: 25px;
-				font-size: 26px;
-				line-height: 29px;
-			}
+		}
+		.ts-headNav{
+			height: auto;
 		}
 		.ts-mobileMenu{
 			background-color: @primaryColor;
@@ -609,16 +555,522 @@ $$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
 						}
 					}
 			}
+			.closePopover {
+				top: 0;
+				right: 0;
+				width: 30px;
+				height: 30px;
+				.text-right;
+				.block;
+				.absolute;
+
+					button {
+						background-color: transparent;
+						color: @white;
+						font-size: 20px;
+						height: 30px;
+						width: 30px;
+						line-height: 35px;
+						content: "";
+						font-family: themestudio;
+						outline: none;
+						.inlineblock;
+						.text-center;
+						.nopad;
+						.noborder;
+
+							&:before {
+								content: "\66";
+							}
+					}
+			}
 		}
 		.ts-headerDiv__forMobile {
 			width: calc(100% - 30px);
 			.inlineblock;
 		}
-		&.st--menuOpen{
+		&.st-open{
 			.ts-mobileMenu{
 				left: 0;
 			}
 		}
   }
 
+}
+
+/* --------------------------------
+	5.3 Header Type 02
+----------------------------------- */
+
+.ts-header-02 {
+  background-color: @white;
+  padding: 26px 0;
+	.block;
+	.box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.1));
+
+	.ts-headNav{
+		height: 35px;
+		.block;
+		.relative;
+		.text-right;
+
+		ul{
+			list-style-type: none;
+			.block;
+			.nomargin;
+			.nopad;
+
+				li{
+					margin-right: 16px;
+					.inlineblock;
+					.relative;
+					.valign-middle;
+
+						&:last-child{
+							.margin0-right;
+						}
+
+						a{
+							color: @fontColor;
+							letter-spacing: 0.21px;
+							line-height: 22px;
+							outline: none;
+							text-decoration: none;
+							padding: 6px 8px 7px;
+							.block;
+							.font-16;
+							.bold;
+						}
+				}
+		}
+	}
+
+	.ts-headLogo{
+		.block;
+		.relative;
+
+		.ts-headLogo_img{
+			height: 69px;
+			width: 80px;
+			margin-right: 25px;
+			background-color: @primaryColor;
+			.inlineblock;
+			.valign-middle;
+		}
+		.ts-headLogo_title{
+			.inlineblock;
+			.valign-middle;
+
+				.Logo_title{
+					color: @primaryColor;
+					letter-spacing: 0.32px;
+					line-height: 33px;
+					.block;
+					.font-24;
+					.bold;
+						&.sub{
+							.font-18;
+							.semiBold;
+							.margin0-bottom;
+						}
+				}
+		}
+
+	}
+
+	.btnPrimary__menu{
+		.icon{
+			color: @primaryColor;
+		}
+	}
+	.ts-navMobile{
+		.inlineblock;
+	}
+	.ts-headNav{
+		height: auto;
+	}
+
+	.ts-navMobile{
+		.hide;
+		.transition(all ease 0.3s);
+	}
+	.ts-mobileMenu{
+		.closePopover {
+			.hide;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-header-02 {
+		padding: 10px 0;
+
+		.ts-headLogo{
+			.ts-headLogo_img{
+				height: 36px;
+				width: 42px;
+				.margin10-right;
+			}
+			.ts-headLogo_title{
+
+					.Logo_title{
+						line-height: 20px;
+						.font-16;
+							&.sub{
+								font-size: 11px;
+								line-height: 15px;
+							}
+					}
+			}
+		}
+
+		.ts-navMobile{
+			.inlineblock;
+
+			.btnPrimary__menu{
+				.icon{
+					color: @primaryColor;
+				}
+			}
+		}
+		.ts-mobileMenu{
+			background-color: @primaryColor;
+			position: fixed;
+			top: 0;
+			left: -350px;
+			height: 100%;
+			width: 300px;
+			padding: 20px 0;
+			z-index: 5;
+			.transition(all ease 0.3s);
+			.box-shadow(0 0 6px 3px rgba(0, 0, 0, 0.1));
+
+			.ts-headNav{
+				height: auto;
+				.text-left;
+
+					ul{
+						li{
+							border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+							.block;
+							.nomargin;
+								a {
+									color: @white;
+									.block;
+									.bold;
+									.pad20;
+									.text-uppercase;
+								}
+						}
+					}
+			}
+			.closePopover {
+				top: 0;
+				right: 0;
+				width: 30px;
+				height: 30px;
+				.text-right;
+				.block;
+				.absolute;
+
+					button {
+						background-color: transparent;
+						color: @white;
+						font-size: 20px;
+						height: 30px;
+						width: 30px;
+						line-height: 35px;
+						content: "";
+						font-family: themestudio;
+						outline: none;
+						.inlineblock;
+						.text-center;
+						.nopad;
+						.noborder;
+
+							&:before {
+								content: "\66";
+							}
+					}
+			}
+		}
+
+		.ts-headerDiv__forMobile {
+			width: calc(100% - 30px);
+			.inlineblock;
+		}
+		&.st-open{
+			.ts-mobileMenu{
+				left: 0;
+			}
+		}
+  }
+
+}
+
+
+/* --------------------------------
+	5.4 Header Type 04
+----------------------------------- */
+
+.ts-header-04 {
+  background-color: @primaryColor;
+  padding: 20px 0;
+	.block;
+	.box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.1));
+
+	.contactInfo{
+    color: @white;
+		.block;
+		.valign-middle;
+		.relative;
+		.font-14;
+		.bold;
+
+			.icon{
+				color: @white;
+				margin-right: 3px;
+				line-height: 13px;
+				.valign-middle;
+				.relative;
+				.font-14;
+				.inlineblock;
+			}
+	}
+
+	.seprateNav{
+		margin-top: 33px;
+	}
+	.ts-headNav{
+		height: 35px;
+		.block;
+		.relative;
+		.text-right;
+
+		ul{
+			list-style-type: none;
+			.block;
+			.nomargin;
+			.nopad;
+
+				li{
+					margin-right: 16px;
+					.inlineblock;
+					.relative;
+					.valign-middle;
+
+						&:last-child{
+							.margin0-right;
+						}
+
+						a{
+							color: @white;
+							letter-spacing: 0.21px;
+							line-height: 22px;
+							outline: none;
+							text-decoration: none;
+							padding: 6px 8px 7px;
+							.block;
+							.font-16;
+							.bold;
+						}
+				}
+		}
+	}
+
+	.ts-headLogo{
+		.block;
+		.relative;
+
+		.ts-headLogo_img{
+			height: 69px;
+			width: 80px;
+			margin-right: 25px;
+			background-color: @white;
+			.inlineblock;
+			.valign-middle;
+		}
+		.ts-headLogo_title{
+			.inlineblock;
+			.valign-middle;
+
+				.Logo_title{
+					color: @white;
+					letter-spacing: 0.32px;
+					line-height: 33px;
+					.block;
+					.font-24;
+					.bold;
+						&.sub{
+							.font-18;
+							.semiBold;
+							.margin0-bottom;
+						}
+				}
+		}
+
+	}
+
+	.ts-navMobile{
+		.hide;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-header-04 {
+		padding: 10px 0;
+
+		.contactInfo{
+			.font-12;
+			.margin15-bottom;
+			.text-center;
+			.bold;
+
+				.icon{
+					margin-right: 3px;
+					line-height: 11px;
+					.font-12;
+				}
+		}
+		.ts-headLogo{
+			.ts-headLogo_img{
+				height: 36px;
+				width: 42px;
+				.margin10-right;
+			}
+			.ts-headLogo_title{
+
+					.Logo_title{
+						line-height: 20px;
+						.font-16;
+							&.sub{
+								font-size: 11px;
+								line-height: 15px;
+							}
+					}
+			}
+		}
+
+		.btnPrimary__menu{
+			.icon{
+				color: @white;
+			}
+		}
+		.ts-navMobile{
+			.inlineblock;
+		}
+		.seprateNav{
+			.hide;
+			.ts-headNav{
+				height: auto;
+			}
+		}
+		.ts-headerDiv__forMobile {
+			width: calc(100% - 30px);
+			.inlineblock;
+		}
+  }
+
+}
+
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   7. Sidebar Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+.ts-sidebar {
+	background-color: @primaryColor;
+	top: 0;
+	right: 0;
+	width: 350px;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 99;
+	padding: 20px 40px;
+	.hide;
+	.transition(ease all 0.3s);
+	.box-shadow(-10px 0 20px 0 rgba(0,0,0,0.2));
+
+	&.type-1{background-color: @secondaryColor;}
+
+	.closePopover {
+		margin-bottom: 30px;
+		height: 30px;
+		.width100;
+		.text-right;
+		.block;
+
+			button {
+				background-color: transparent;
+				color: @fontColor;
+				font-size: 30px;
+				height: 30px;
+				width: 30px;
+				line-height: 35px;
+				content: "";
+				font-family: themestudio;
+				outline: none;
+				.inlineblock;
+				.text-center;
+				.nopad;
+				.noborder;
+
+					&:before {
+						content: "\66";
+					}
+			}
+	}
+
+	ul {
+		.block;
+		.nomargin;
+		.nopad;
+
+			li {
+				list-style: none;
+				margin-bottom: 40px;
+				.block;
+
+					&:last-child {
+						.margin0-bottom;
+					}
+					a {
+						color: @fontColor;
+						letter-spacing: 2.49px;
+						line-height: 24px;
+						outline: none;
+						.block;
+						.text-left;
+						.text-uppercase;
+						.nopad;
+						.font-18;
+					}
+			}
+	}
+}
+
+.st-openSidebar{
+	overflow: hidden;
+
+		&:before{
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 98;
+			content: '';
+			height: 100%;
+			width: 100%;
+		}
+
+		.ts-sidebar {
+			.block;
+		}
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-sidebar {
+		width: 300px;
+		.pad20;
+	}
 }
