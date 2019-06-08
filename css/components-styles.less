@@ -1,0 +1,624 @@
+/* ------------------------------
+1. Theme Colour Setting
+---------------------------------*/
+@primaryColor: #981C1E; @secondaryColor: #FFCC01; @thirdColor: #999999;
+@fontColor: #383838; @colorEEEEEE: #eeeeee;
+
+@col-error: #d44950;
+
+/* ------------------------------
+2. Font Setting
+---------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:400,700&display=swap");
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+@font-face {
+  font-family: themestudio;
+  src: url(../fonts/themestudio.eot);
+  src: url(../fonts/themestudio.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/themestudio.woff) format("woff"),
+    url(../fonts/themestudio.ttf) format("truetype"),
+    url(../fonts/themestudio.svg#themestudio) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: themestudio !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*=" ts-"]:before,
+[class^="ts-"]:before {
+  font-family: themestudio !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ts-angle-down:before {
+  content: "\61";
+}
+.ts-angle-left:before {
+  content: "\62";
+}
+.ts-angle-right:before {
+  content: "\63";
+}
+.ts-angle-up:before {
+  content: "\64";
+}
+.ts-bars:before {
+  content: "\65";
+}
+.ts-close:before {
+  content: "\66";
+}
+.ts-done:before {
+  content: "\67";
+}
+.ts-add:before {
+  content: "\68";
+}
+.ts-more-vertical:before {
+  content: "\69";
+}
+.ts-more-horizontal:before {
+  content: "\6a";
+}
+.ts-remove:before {
+  content: "\6b";
+}
+.ts-radio-button-off:before {
+  content: "\6c";
+}
+.ts-radio-button-on:before {
+  content: "\6d";
+}
+.ts-checkbox-outline:before {
+  content: "\6e";
+}
+.ts-checkbox-outline-blank:before {
+  content: "\6f";
+}
+.ts-checkbox-blank:before {
+  content: "\70";
+}
+.ts-checkbox:before {
+  content: "\71";
+}
+.ts-person-stalker:before {
+  content: "\72";
+}
+.ts-person:before {
+  content: "\73";
+}
+.ts-phone:before {
+  content: "\74";
+}
+.ts-facebook:before {
+  content: "\75";
+}
+.ts-instagram:before {
+  content: "\76";
+}
+.ts-linkedin:before {
+  content: "\77";
+}
+.ts-email:before {
+  content: "\78";
+}
+
+/* -------------------------------------------------
+			3.Utilities and setting variables
+	---------------------------------------------------- */
+	.fontPrimary_body{
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+	}
+	.fontPrimary_heading{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 700;
+	}
+
+	.clear { clear:both; }.left { float:left; }.right {float:right; }.center {margin: 0 auto; }.nofloat { float:none; }
+	.absolute{position:absolute;}.relative{position:relative;}.noborder{border: 0 none;}
+	.hide { display:none; }.novis { visibility: hidden; }.block { display:block; }.inlineblock { display:inline-block; }
+	.inline { display:inline; }.display-table { display:table; }
+	.text-center{text-align: center;}.text-left{text-align: left;}.text-right{text-align: right;}
+	.bold{font-weight: 600;}.text-uppercase{text-transform: uppercase;}
+
+	.font-8 { font-size:8px; }   .font-10 { font-size:10px; } .font-12 { font-size:12px; }
+	.font-14 { font-size:14px; } .font-16 { font-size:16px; }	.font-18 { font-size:18px; }
+	.font-20 { font-size:20px; } .font-22 { font-size:22px; } .font-24 { font-size:24px; }
+
+	.valign-middle{vertical-align: middle;}
+	.height100{height:100%;} .width100{width:100%;}
+
+	.nopad { padding: 0; }
+	.pad5 { padding:5px; } .pad10 { padding:10px; }
+	.pad15 { padding:15px; } .pad20 { padding:20px; }
+
+	.pad0-top { padding-top: 0; } .pad5-top { padding-top:5px; } .pad10-top { padding-top:10px; }
+	.pad15-top { padding-top:15px; } .pad20-top { padding-top:20px; }
+
+	.pad0-right { padding-right: 0; } .pad5-right { padding-right:5px; } .pad10-right { padding-right:10px; }
+	.pad15-right { padding-right:15px; } .pad20-right { padding-right:20px; }
+
+	.pad0-bottom { padding-bottom: 0; } .pad5-bottom { padding-bottom:5px; } .pad10-bottom { padding-bottom:10px; }
+	.pad15-bottom { padding-bottom:15px; } .pad20-bottom { padding-bottom:20px; }
+
+	.pad0-left { padding-left: 0; } .pad5-left { padding-left:5px; } .pad10-left { padding-left:10px; }
+	.pad15-left { padding-left:15px; } .pad20-left { padding-left:20px; }
+
+	.nomargin { margin:0; }
+	.margin5 { margin:5px; } .margin10 { margin:10px; } .margin15 { margin:15px; }
+	.margin20 { margin:20px; }
+
+	.margin0-top { margin-top: 0; } .margin5-top { margin-top:5px; } .margin10-top { margin-top:10px; }
+	.margin15-top { margin-top:15px; } .margin20-top { margin-top:20px; }
+
+	.margin0-right { margin-right: 0; } .margin5-right { margin-right:5px; } .margin10-right { margin-right:10px; }
+	.margin15-right { margin-right:15px; } .margin20-right { margin-right:20px; }
+
+	.margin0-bottom { margin-bottom: 0; } .margin5-bottom { margin-bottom:5px; } .margin10-bottom { margin-bottom:10px; }
+	.margin15-bottom { margin-bottom:15px; } .margin20-bottom { margin-bottom:20px; }
+
+	.margin0-left { margin-left: 0; } .margin5-left { margin-left:5px; } .margin10-left { margin-left:10px; }
+	.margin15-left { margin-left:15px; } .margin20-left { margin-left:20px; }
+
+	.rounded-corners (@arguments) {
+		-webkit-border-radius: @arguments;
+		-moz-border-radius: @arguments;
+		border-radius: @arguments;
+	}
+
+	.box-shadow(@arguments){
+		box-shadow:@arguments;
+		-moz-box-shadow:@arguments;
+		-webkit-box-shadow:@arguments;
+		-ms-box-shadow:@arguments;
+		-o-box-shadow:@arguments;
+	}
+
+	.transition(@arguments){
+		transition:@arguments;
+		-moz-transition:@arguments;
+		-webkit-transition:@arguments;
+		-o-transition:@arguments;
+		-ms-transition:@arguments;
+	}
+
+	.clearfix {
+		.block;
+
+		&:after{
+			clear: both;
+			content: ".";
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			.block;
+		}
+	}
+
+	@white: #FFFFFF; @black: #000000;
+	@link-blue:#2a6496;
+	.textWhite{color: @white;} .bgWhite{background-color: @white;}
+
+/* ------------------------------
+4. Reset Styles
+---------------------------------*/
+html {
+  .height100;
+  .width100;
+}
+
+body {
+	background-color: #FAFAFA;
+  line-height: 22px;
+  user-select: none;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+	-moz-font-smoothing: antialiased !important;
+	.fontPrimary_body;
+	.font-14;
+	.relative;
+	.height100;
+	.nomargin;
+	.nopad;
+}
+
+/* ------------------------------
+4. Buttons Styles
+---------------------------------*/
+.btnPrimary__sm {
+  background-color: @secondaryColor;
+  letter-spacing: 0.18px;
+  line-height: 13px;
+  color: @fontColor;
+  padding: 8px 12px;
+  height: 35px;
+  outline: 0;
+	.inlineblock;
+	.font-14;
+	.bold;
+	.noborder;
+	.rounded-corners(4px);
+	.transition(all ease 0.3s);
+}
+
+.btnPrimary__border {
+  border: 1px solid @white;
+  background-color: transparent;
+  letter-spacing: 0.18px;
+  line-height: 13px;
+  color: @fontColor;
+  padding: 8px 12px;
+  height: 35px;
+  outline: 0;
+	.inlineblock;
+	.font-14;
+	.bold;
+	.rounded-corners(4px);
+	.transition(all ease 0.3s);
+		&:hover{
+			color: @white;
+		}
+}
+
+.btnPrimary__menu {
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  color: @white;
+  font-size: 36px;
+  line-height: 35px;
+  outline: none;
+	.noborder;
+	.nopad;
+	.text-center;
+	.relative;
+
+		.icon{
+			color: @white;
+			.inlineblock;
+			.valign-middle;
+		}
+}
+
+@media only screen and (max-width: 768px) {
+  .btnPrimary__sm {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 6px 12px;
+    height: 29px;
+  }
+}
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   6. Header Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+
+.ts-navPopover {
+	.block;
+	.relative;
+
+		.navPopover {
+			background-color: @secondaryColor;
+			top: -43px;
+			right: 0;
+			width: 350px;
+			padding: 0 40px;
+			max-height: 0;
+			overflow: hidden;
+			.absolute;
+			.hide;
+			.rounded-corners(all ease 0.3s);
+
+			.closePopover {
+				margin-bottom: 30px;
+				height: 30px;
+				.width100;
+				.text-right;
+				.block;
+
+					button {
+						background-color: transparent;
+						color: @fontColor;
+						font-size: 30px;
+						height: 30px;
+						width: 30px;
+						line-height: 35px;
+						content: "";
+						font-family: themestudio;
+						outline: none;
+						.inlineblock;
+						.text-center;
+						.nopad;
+						.noborder;
+
+							&:before {
+								content: "\66";
+							}
+					}
+			}
+
+			ul {
+				.block;
+				.nomargin;
+				.nopad;
+
+					li {
+						list-style: none;
+						margin-bottom: 40px;
+						.block;
+
+							&:last-child {
+								.margin0-bottom;
+							}
+							a {
+								color: @fontColor;
+								letter-spacing: 2.49px;
+								line-height: 24px;
+								outline: none;
+								.block;
+								.text-left;
+								.text-uppercase;
+								.nopad;
+								.font-18;
+								.bold;
+							}
+					}
+			}
+		}
+		&.st-open{
+			.navPopover {
+				max-height: 500px;
+				padding: 40px;
+				.block;
+			}
+		}
+}
+
+
+/* --------------------------------
+	5.1 Header Top
+----------------------------------- */
+
+.ts-headerTop {
+  padding: 10px 0;
+  height: 55px;
+	.bgWhite;
+	.block;
+	.text-right;
+	.relative;
+
+	.ts-headNavTop{
+		ul{
+			list-style-type: none;
+			.nopad;
+			.nomargin;
+			.block;
+
+				li {
+					margin-right: 16px;
+					color: @primaryColor;
+					.inlineblock;
+					.valign-middle;
+					.relative;
+					.bold;
+					.font-14;
+
+						&:last-child{
+							.margin0-right;
+						}
+						.icon{
+							color: @primaryColor;
+							margin-right: 3px;
+							line-height: 13px;
+							.inlineblock;
+							.font-14;
+							.valign-middle;
+						}
+				}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-headerTop {
+		height: 49px;
+			.ts-headNavTop{
+				ul{
+					li{
+						.font-12;
+					}
+				}
+			}
+  }
+}
+
+/* --------------------------------
+	5.2 Header Type 01
+----------------------------------- */
+
+.ts-header-01 {
+  background-color: @primaryColor;
+  padding: 26px 0;
+	.block;
+	.box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.1));
+
+	.ts-headNav{
+		height: 35px;
+		.block;
+		.relative;
+		.text-right;
+
+		ul{
+			list-style-type: none;
+			.block;
+			.nomargin;
+			.nopad;
+
+				li{
+					margin-right: 16px;
+					.inlineblock;
+					.relative;
+					.valign-middle;
+
+						&:last-child{
+							.margin0-right;
+						}
+
+						a{
+							color: @white;
+							letter-spacing: 0.21px;
+							line-height: 22px;
+							outline: none;
+							text-decoration: none;
+							padding: 6px 8px 7px;
+							.block;
+							.font-16;
+							.bold;
+						}
+				}
+		}
+	}
+
+	.ts-headLogo{
+		.block;
+		.relative;
+
+		.ts-headLogo_img{
+			height: 69px;
+			width: 80px;
+			margin-right: 25px;
+			background-color: @white;
+			.inlineblock;
+			.valign-middle;
+		}
+		.ts-headLogo_title{
+			.inlineblock;
+			.valign-middle;
+
+				.Logo_title{
+					color: @white;
+					letter-spacing: 0.32px;
+					line-height: 33px;
+					.block;
+					.font-24;
+					.bold;
+						&.sub{
+							.font-18;
+							.bold;
+							.margin0-bottom;
+						}
+				}
+		}
+
+	}
+
+	.ts-navMobile{
+		.hide;
+		.transition(all ease 0.3s);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-header-01 {
+		padding: 10px 0;
+
+		.ts-headLogo{
+			.ts-headLogo_img{
+				height: 36px;
+				width: 42px;
+				.margin10-right;
+			}
+			.ts-headLogo_title{
+
+					.Logo_title{
+						line-height: 20px;
+						.font-16;
+							&.sub{
+								font-size: 11px;
+								line-height: 15px;
+							}
+					}
+			}
+		}
+
+		.ts-navMobile{
+			.inlineblock;
+
+			.btnPrimary__menu{
+				height: 25px;
+				width: 25px;
+				font-size: 26px;
+				line-height: 29px;
+			}
+		}
+		.ts-mobileMenu{
+			background-color: @primaryColor;
+			position: fixed;
+			top: 0;
+			left: -350px;
+			height: 100%;
+			width: 300px;
+			padding: 20px 0;
+			z-index: 5;
+			.transition(all ease 0.3s);
+			.box-shadow(0 0 6px 3px rgba(0, 0, 0, 0.1));
+
+			.ts-headNav{
+				height: auto;
+				.text-left;
+
+					ul{
+						li{
+							border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+							.block;
+							.nomargin;
+								a {
+									.block;
+									.bold;
+									.pad20;
+									.text-uppercase;
+								}
+						}
+					}
+			}
+		}
+		.ts-headerDiv__forMobile {
+			width: calc(100% - 30px);
+			.inlineblock;
+		}
+		&.st--menuOpen{
+			.ts-mobileMenu{
+				left: 0;
+			}
+		}
+  }
+
+}
