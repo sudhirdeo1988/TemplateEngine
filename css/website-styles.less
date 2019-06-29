@@ -9,11 +9,13 @@
 /* ------------------------------
 1. Font Setting
 ---------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,600|Rouge+Script&display=swap');
 /*
 font-family: 'Open Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
+font-family: 'Rouge Script', cursive;
 */
+
 
 @font-face {
   font-family: themestudio;
@@ -122,7 +124,12 @@ font-family: 'Poppins', sans-serif;
 .ts-email:before {
   content: "\78";
 }
-
+.ts-quote-right:before {
+  content: "\79";
+}
+.ts-quote-left:before {
+  content: "\7a";
+}
 /* -------------------------------------------------
 				Utilities and setting variables
 	---------------------------------------------------- */
@@ -226,7 +233,8 @@ body {
   font-style: normal;
   line-height: 22px;
   user-select: none;
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+	overflow-x: hidden !important;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 	-moz-font-smoothing: antialiased !important;
@@ -361,6 +369,7 @@ body {
 			.bold;
 			.text-uppercase;
 			.margin5-bottom;
+			.text-left;
 
 				sup{
 					color: @col-error;
@@ -493,7 +502,7 @@ body {
 		// ---------- Menu Container
 		.menuContainer{
 			border-top: 2px solid rgba(0,0,0,0.2);
-			margin-bottom: 129px;
+			margin-bottom: 60px;
 			.relative;
 			.block;
 
@@ -587,7 +596,8 @@ body {
 	.c-sidebar{
 		width: 300px;
 		padding: 20px 0;
-		left: -310px;
+		left: auto;
+		right: -310px;
 
 				// ---------- Logo Container
 				.logoContainer{
@@ -613,7 +623,7 @@ body {
 			.width100;
 		}
 		.c-sidebar{
-			left: 0;
+			right: 0;
 
 			.closeMenu{
 				.inlineblock;
@@ -810,6 +820,7 @@ body {
 	.c-infoContainer{
 		padding: 0 25px;
 		margin-bottom: 40px;
+		.text-center;
 
 			&.page-heading{margin-bottom: 40px;}
 
@@ -822,6 +833,7 @@ body {
 						.infoheading_title{
 							height: 30px;
 							.pad10-right;
+							.pad10-left;
 								.title {
 									line-height: 30px;
 									.font-22;
@@ -838,6 +850,9 @@ body {
 @media only screen and (max-width: 768px) {
 	.c-infoContainer{
 		padding: 0 10px;
+		.row{
+			margin:0 -10px;
+		}
 	}
 }
 
@@ -943,6 +958,7 @@ body {
 			padding: 6px 0;
 			line-height: 20px;
 			.font-14;
+			.text-left;
 		}
 	}
 }
@@ -1017,11 +1033,12 @@ body {
 	.c-profileListing{
 		padding-left: 0;
 		margin-bottom: 40px;
+		.text-center;
 
 				.profileListing_pic{
 					height: 60px;
 					width: 60px;
-					.margin20-bottom;
+					margin: 0 auto 20px;
 					.relative;
 					.rounded-corners(5px);
 
@@ -1067,6 +1084,154 @@ body {
 	}
 }
 
+/* ------------------------------
+			Component :: Testimonial Slider
+---------------------------------*/
+.c-testimonialBlock{
+	border: 1px solid #f3f3f3;
+	background-color: @white;
+	.pad20;
+	.relative;
+	.width100;
+	.text-center;
+
+	.testimonialBlock_icon{
+		height: 30px;
+		width: 30px;
+		margin: 0 auto 20px;
+		.relative;
+		.text-center;
+
+			.icon{
+				color: @secondaryColor;
+				font-size: 30px;
+				.block;
+			}
+	}
+	.testimonialBlock_info{
+		border-bottom: 1px solid #f3f3f3;
+		font-family: 'Rouge Script', cursive;
+		color: lighten(@fontColor,20%);
+		font-size: 26px;
+		line-height: 30px;
+		.relative;
+		.pad20-bottom;
+		.margin20-bottom;
+	}
+	.testimonialBlock_owner{
+		.relative;
+		.block;
+		.text-center;
+
+			h4,span{
+				color: @primaryColor;
+				line-height: 16px;
+				.nomargin;
+				.font-14;
+				.block;
+				.margin5-bottom;
+			}
+			span{
+				color: @fontColor;
+				.font-12;
+				.nomargin;
+			}
+	}
+}
+
+
+/* ------------------------------
+			Component :: Students News
+---------------------------------*/
+.c-studNewsBlock{
+	.relative;
+
+		.studNewsBlock{
+			background: @white;
+			min-height: 200px;
+			margin: 35px 5px 5px;
+			.pad20-top;
+			.block;
+			.rounded-corners(20px);
+			.box-shadow(0 0 3px #ccc);
+
+				.studNewsBlock_img{
+					background-color: #ececec;
+					margin: -53px auto 15px;
+					height: 130px;
+					width: 130px;
+					.rounded-corners(100px);
+					.box-shadow(1px 1px 4px #7d7d7d);
+
+						img{
+							height: 130px;
+							width: 130px;
+							.rounded-corners(100px);
+							.block;
+						}
+				}
+
+				.studNewsBlock_info{
+					min-height: 100px;
+					.text-center;
+					.pad20;
+
+						h4{
+							color: @primaryColor;
+							line-height: 20px;
+							.nomargin;
+							.margin10-bottom;
+							.font-18;
+							.bold;
+							.block;
+						}
+						span{
+							color: lighten(@fontColor,24%);
+							line-height: 16px;
+							.margin5-bottom;
+							.font-14;
+							.block;
+						}
+				}
+				.studNewsBlock_prog{
+					background-color: @primaryColor;
+					.pad20;
+					.rounded-corners(0 0 20px 20px);
+
+						.d-heading,
+						.d-marks{
+							color: @white;
+							line-height: 12px;
+							.bold;
+							.font-10;
+							.text-uppercase;
+							.block;
+							.margin5-bottom;
+						}
+						.d-marks{
+							line-height: 25px;
+							.font-22;
+							.nomargin;
+						}
+				}
+		}
+}
+
+.divider-container{
+	table-layout: fixed;
+	display: table;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+.divider-container .div-block {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding:0 2px;
+}
 
 /* ------------------------------
 			Component :: Footer Container
@@ -1159,3 +1324,67 @@ body {
 	}
 }
 
+/* ------------------------------
+			Component :: Owl Theme
+---------------------------------*/
+.owl-theme{
+	.owl-nav{
+		outline: none;
+		.margin10-top;
+		.text-center;
+
+			& [class*='owl-']{
+				color: @white;
+				padding: 4px 7px;
+				background: #D6D6D6;
+				cursor: pointer;
+				.font-14;
+				.margin5;
+				.inlineblock;
+				.rounded-corners(3px);
+
+					&:hover {
+						background: #869791;
+						color: @white;
+						text-decoration: none;
+					}
+			}
+			.disabled {
+				opacity: 0.5;
+				cursor: default;
+			}
+			&.disabled + .owl-dots {
+				.margin20-top;
+			}
+	}
+
+	.owl-dots {
+		outline: none;
+		.text-center;
+
+			.owl-dot {
+				outline: none;
+				zoom: 1;
+				*display: inline;
+				.inlineblock;
+				.transition(all ease 0.3s);
+
+					span{
+						width: 7px;
+						height: 7px;
+						background: #D6D6D6;
+						-webkit-backface-visibility: visible;
+						.margin5;
+						.block;
+						.rounded-corners(30px);
+						.transition(all 200ms ease);
+					}
+					&.active,
+					&:hover{
+						span{
+							background-color: @primaryColor;
+						}
+					}
+			}
+	}
+}
