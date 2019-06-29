@@ -30,6 +30,47 @@
 		advanced:{ updateOnContentResize: true }
 	});
 
+    // -------- owlCarousel
+	$(".c-testimonial").owlCarousel({
+    items:2,
+    nav:false,
+    dots:true,
+    margin:10,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      }
+    }
+  });
+
+      // -------- owlCarousel
+	$(".c-studNewsBlock").owlCarousel({
+    items:3,
+    nav:false,
+    dots:true,
+    margin:10,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
+    }
+  });
+
 
   // -------- Scroll Page Menu
   var lastId,
