@@ -1220,17 +1220,18 @@ body {
 .divider-container{
 	table-layout: fixed;
 	display: table;
-	width: 100%;
-	margin: 0;
-	position: relative;
-}
-.divider-container .div-block {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	text-align: center;
-	position: relative;
-	padding:0 2px;
+	.relative;
+	.nomargin;
+	.width100;
+
+	.div-block {
+		display: table-cell;
+		padding:0 2px;
+		.relative;
+		.valign-middle;
+		.width100;
+		.text-center;
+	}
 }
 
 /* ------------------------------
