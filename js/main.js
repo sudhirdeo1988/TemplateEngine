@@ -30,47 +30,6 @@
 		advanced:{ updateOnContentResize: true }
 	});
 
-    // -------- owlCarousel
-	$(".c-testimonial").owlCarousel({
-    items:2,
-    nav:false,
-    dots:true,
-    margin:10,
-    mouseDrag:true,
-    touchDrag:true,
-    pullDrag:true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      }
-    }
-  });
-
-      // -------- owlCarousel
-	$(".c-studNewsBlock").owlCarousel({
-    items:3,
-    nav:false,
-    dots:true,
-    margin:10,
-    mouseDrag:true,
-    touchDrag:true,
-    pullDrag:true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1024: {
-        items: 3
-      }
-    }
-  });
-
 
   // -------- Scroll Page Menu
   var lastId,
@@ -102,27 +61,4 @@
     e.preventDefault();
   });
 
-  $(window).scroll(function() {
-    // Get container scroll position
-    var fromTop = $(this).scrollTop() + topMenuHeight;
-
-    // Get id of current scroll item
-    var cur = scrollItems.map(function() {
-      if ($(this).offset().top < fromTop) return this;
-    });
-    // Get the id of the current element
-    cur = cur[cur.length - 1];
-    var id = cur && cur.length ? cur[0].id : "";
-
-    if (lastId !== id) {
-      lastId = id;
-      menuItems
-        .parent()
-        .removeClass("st-active")
-        .end()
-        .filter("[href='#" + id + "']")
-        .parent()
-        .addClass("st-active");
-    }
-  });
 })(jQuery);
