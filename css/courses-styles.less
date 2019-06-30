@@ -1,0 +1,184 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Courses Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Courses type 01
+----------------------------------- */
+
+.ts-courses {
+  &.type-01 {
+    .relative;
+
+    .ts-courseBlock {
+      background-color: @white;
+      min-height: 265px;
+      .block;
+      .relative;
+      .pad20;
+      .margin20-bottom;
+      .text-center;
+      .box-shadow(0 0 5px #ccc);
+
+      .blockHeading {
+        color: @primaryColor;
+        line-height: 24px;
+        .block;
+        .font-18;
+        .margin20-bottom;
+        .bold;
+      }
+      .blockInfo {
+        color: #737373;
+        line-height: 19px;
+        .block;
+        .font-14;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-courses {
+		&.type-01 {
+
+			.ts-courseBlock {
+				background-color: @white;
+				min-height: 100px;
+				.pad15;
+				.margin15-bottom;
+
+				.blockHeading {
+					line-height: 20px;
+					.font-14;
+					.margin10-bottom;
+				}
+				.blockInfo {
+					line-height: 18px;
+					.font-12;
+				}
+			}
+		}
+	}
+}
+
+/* --------------------------------
+	Courses type 02
+----------------------------------- */
+
+.ts-courses {
+  &.type-02 {
+    .relative;
+
+    .ts-courseBlock {
+      background-color: transparent;
+      .block;
+      .relative;
+      .nopad;
+      .margin20-bottom;
+
+      .blockHeading {
+        color: @primaryColor;
+        line-height: 24px;
+        .block;
+        .font-18;
+        .margin20-bottom;
+        .bold;
+      }
+      .blockInfo {
+        color: #737373;
+        line-height: 19px;
+        .block;
+        .font-14;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-courses {
+		&.type-02 {
+
+			.ts-courseBlock {
+				.margin20-bottom;
+
+				.blockHeading {
+					line-height: 20px;
+					.font-14;
+					.margin10-bottom;
+				}
+				.blockInfo {
+					line-height: 18px;
+					.font-12;
+				}
+			}
+		}
+	}
+}
+
+/* --------------------------------
+	Courses type 03
+----------------------------------- */
+
+.ts-courses {
+  &.type-03 {
+    .relative;
+
+		.ts-coursePoster{
+			.block;
+			.pad15-bottom;
+				img{
+					.width100;
+					.block;
+				}
+		}
+    .ts-courseBlock {
+			border-bottom: 1px solid #D5D5D5;
+      background-color: transparent;
+      .block;
+      .relative;
+      .pad15-bottom;
+      .margin15-bottom;
+
+      .blockHeading {
+        color: @primaryColor;
+        line-height: 24px;
+        .block;
+        .font-18;
+        .margin10-bottom;
+        .bold;
+      }
+      .blockInfo {
+        color: #737373;
+        line-height: 19px;
+        .block;
+        .font-14;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-courses {
+		&.type-03 {
+			.ts-coursePoster{
+				.pad15-bottom;
+			}
+			.ts-courseBlock {
+				.pad10-bottom;
+				.margin10-bottom;
+
+				.blockHeading {
+					line-height: 20px;
+					.font-14;
+					.margin10-bottom;
+				}
+				.blockInfo {
+					line-height: 18px;
+					.font-12;
+				}
+			}
+		}
+	}
+}
