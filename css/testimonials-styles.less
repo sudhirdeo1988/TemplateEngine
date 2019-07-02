@@ -1,0 +1,232 @@
+@import "./utilities.less";
+
+/* ------------------------------
+			Component :: Owl Theme
+---------------------------------*/
+.owl-theme{
+	.owl-nav{
+		.no-outline;
+		.margin10-top;
+		.text-center;
+
+			& [class*='owl-']{
+				color: @white;
+				padding: 4px 7px;
+				background: #D6D6D6;
+				cursor: pointer;
+				.font-14;
+				.margin5;
+				.inlineblock;
+				.rounded-corners(3px);
+
+					&:hover {
+						background: #869791;
+						color: @white;
+						text-decoration: none;
+					}
+			}
+			.disabled {
+				opacity: 0.5;
+				cursor: default;
+			}
+			&.disabled + .owl-dots {
+				.margin20-top;
+			}
+	}
+
+	.owl-dots {
+		.no-outline;
+		.text-center;
+
+			.owl-dot {
+				.no-outline;
+				zoom: 1;
+				*display: inline;
+				.inlineblock;
+				.transition(all ease 0.3s);
+
+					span{
+						width: 7px;
+						height: 7px;
+						background: #D6D6D6;
+						-webkit-backface-visibility: visible;
+						.margin5;
+						.block;
+						.rounded-corners(30px);
+						.transition(all 200ms ease);
+					}
+					&.active,
+					&:hover{
+						span{
+							background-color: @primaryColor;
+						}
+					}
+			}
+	}
+}
+
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   testimonials Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	testimonials type 01
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-01{
+		background-color: @primaryColor;
+		padding: 60px 0;
+		.relative;
+
+			.ts-testimonialsBlock{
+				padding: 0 100px;
+				.relative;
+				.block;
+
+				.testimonial_item{
+					display: table;
+					table-layout: fixed;
+					.width100;
+
+						.item_img{
+							display: table-cell;
+							width: 180px;
+							.valign-middle;
+								img{
+									max-width: 180px;
+									.block;
+								}
+						}
+
+						.item_info{
+							.pad20-left;
+							.valign-middle;
+
+								.item_infoData{
+									color: @white;
+									line-height: 24px;
+									margin-bottom: 24px;
+									.block;
+									.font-18;
+								}
+								.item_infoTitle{
+									h4, span{
+										color: @white;
+										margin: 0 0 10px;
+										.block;
+										.font-20;
+										.bold;
+										.margin5-bottom;
+									}
+									span{
+										.font-14;
+										.nomargin;
+										.semiBold;
+									}
+								}
+						}
+				}
+
+				.owl-nav{
+					height: 42px;
+					top: 50%;
+					left: 0;
+					margin-top: -21px;
+					.absolute;
+					.width100;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @white;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							.no-outline;
+							.rounded-corners(100px);
+							.nomargin;
+							.cursorPointer;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @white;
+									font-size: 30px;
+									line-height: 30px;
+									.block;
+								}
+						}
+						.owl-prev{.left;}
+						.owl-next{.right;}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-01{
+			padding: 30px 0;
+			.text-center;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+						.block;
+
+							.item_img{
+								height: 150px;
+								width: 150px;
+								margin: 0 auto 20px;
+								.block;
+									img{
+										max-width: 150px;
+									}
+							}
+
+							.item_info{
+								.nopad;
+									.item_infoData{
+										line-height: 18px;
+										.margin15-bottom;
+										.font-14;
+									}
+									.item_infoTitle{
+										h4, span{
+											.margin5-bottom;
+											.font-16;
+										}
+										span{
+											.font-12;
+											.nomargin;
+										}
+									}
+							}
+					}
+
+					.owl-nav{
+						top: auto;
+						left: auto;
+						.nomargin;
+						.margin20-top;
+						.relative;
+						.text-center;
+
+							.owl-prev,
+							.owl-next{
+								float: none;
+								margin: 0 10px;
+							}
+					}
+
+				}
+		}
+
+	}
+}

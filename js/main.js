@@ -61,4 +61,17 @@
     e.preventDefault();
   });
 
+
+      // -------- owlCarousel
+	$(".ts-testimonialsBlock.type-01").owlCarousel({
+    items:1,
+    nav:true,
+    dots:false,
+    margin:0,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    navText: ['<i class="icon ts-angle-left"></i>','<i class="icon ts-angle-right"></i>']
+  });
+
 })(jQuery);
