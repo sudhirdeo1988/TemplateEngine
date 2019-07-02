@@ -71,7 +71,42 @@
     mouseDrag:true,
     touchDrag:true,
     pullDrag:true,
-    navText: ['<i class="icon ts-angle-left"></i>','<i class="icon ts-angle-right"></i>']
+    navText: ['<i class="icon ts-arrow-back"></i>','<i class="icon ts-arrow-forward"></i>']
   });
+
+        // -------- owlCarousel
+	$(".ts-testimonialsBlock.type-02").owlCarousel({
+    items:1,
+    nav:true,
+    dots:false,
+    margin:0,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    navText: ['<i class="icon ts-arrow-back"></i>','<i class="icon ts-arrow-forward"></i>']
+  });
+
+        // -------- owlCarousel
+        $(".ts-testimonialsBlock.type-03").owlCarousel({
+          items:3,
+          nav:true,
+          dots:false,
+          margin:20,
+          mouseDrag:true,
+          touchDrag:true,
+          pullDrag:true,
+          navText: ['<i class="icon ts-arrow-back"></i>','<i class="icon ts-arrow-forward"></i>'],
+          responsive: {
+            0:{
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1024:{
+              items: 3
+            }
+          }
+        });
 
 })(jQuery);

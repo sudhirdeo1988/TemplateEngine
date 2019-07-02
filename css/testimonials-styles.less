@@ -155,8 +155,9 @@ $$$$$$$$$$$$$$$$$$$$   testimonials Styles  $$$$$$$$$$$$$$$$$$
 								.icon{
 									color: @white;
 									font-size: 30px;
-									line-height: 30px;
-									.block;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
 								}
 						}
 						.owl-prev{.left;}
@@ -222,6 +223,464 @@ $$$$$$$$$$$$$$$$$$$$   testimonials Styles  $$$$$$$$$$$$$$$$$$
 							.owl-next{
 								float: none;
 								margin: 0 10px;
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+
+/* --------------------------------
+	testimonials type 02
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-02{
+		.relative;
+
+			.ts-testimonialsBlock{
+				padding: 0 45px;
+				.relative;
+				.block;
+
+				.testimonial_item{
+					background-color: @primaryColor;
+					display: table;
+					table-layout: fixed;
+					margin: 0 35px;
+					padding: 60px;
+
+						.item_img{
+							display: table-cell;
+							width: 180px;
+							.valign-middle;
+								img{
+									max-width: 150px;
+									.block;
+									.rounded-corners(100%);
+								}
+						}
+
+						.item_info{
+							.pad20-left;
+							.valign-middle;
+
+								.item_infoData{
+									color: @white;
+									line-height: 24px;
+									margin-bottom: 24px;
+									.block;
+									.font-18;
+								}
+								.item_infoTitle{
+									h4, span{
+										color: @white;
+										margin: 0 0 10px;
+										.block;
+										.font-20;
+										.bold;
+										.margin5-bottom;
+									}
+									span{
+										.font-14;
+										.nomargin;
+										.semiBold;
+									}
+								}
+						}
+				}
+
+				.owl-nav{
+					height: 42px;
+					top: 50%;
+					left: 0;
+					margin-top: -21px;
+					.absolute;
+					.width100;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @fontColor;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							.no-outline;
+							.rounded-corners(100px);
+							.nomargin;
+							.cursorPointer;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @fontColor;
+									font-size: 30px;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
+								}
+						}
+						.owl-prev{.left;}
+						.owl-next{.right;}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-02{
+			padding: 30px 0;
+			.text-center;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+						padding: 30px;
+						.block;
+						.nomargin;
+
+							.item_img{
+								height: 150px;
+								width: 150px;
+								margin: 0 auto 20px;
+								.block;
+									img{
+										max-width: 150px;
+									}
+							}
+
+							.item_info{
+								.nopad;
+									.item_infoData{
+										line-height: 18px;
+										.margin15-bottom;
+										.font-14;
+									}
+									.item_infoTitle{
+										h4, span{
+											.margin5-bottom;
+											.font-16;
+										}
+										span{
+											.font-12;
+											.nomargin;
+										}
+									}
+							}
+					}
+
+					.owl-nav{
+						top: auto;
+						left: auto;
+						.nomargin;
+						.margin20-top;
+						.relative;
+						.text-center;
+
+							.owl-prev,
+							.owl-next{
+								float: none;
+								margin: 0 10px;
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+/* --------------------------------
+	testimonials type 03
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-03{
+		padding: 60px 0;
+		.relative;
+
+			.ts-testimonialsBlock{
+				.nopad;
+				.relative;
+				.block;
+
+				.testimonial_item{
+					background-color: @primaryColor;
+					padding: 42px 30px;
+					.block;
+					.width100;
+					.rounded-corners(5px);
+
+						.item_info{
+
+								.item_infoData{
+									color: @white;
+									line-height: 24px;
+									margin-bottom: 40px;
+									min-height: 150px;
+									.block;
+									.font-14;
+								}
+								.item_infoTitle{
+									display: table;
+									table-layout: fixed;
+									.width100;
+
+										.item_infoTitle_img{
+											display: table-cell;
+											width: 64px;
+											.relative;
+												img{
+													height: 64px;
+													width: 64px;
+													.block;
+													.rounded-corners(100px);
+												}
+										}
+										.item_infoTitle_text{
+											display: table-cell;
+											.width100;
+											.valign-top;
+											.pad10-left;
+
+												h4, span{
+													color: @white;
+													margin: 0 0 5px;
+													.block;
+													.font-16;
+													.bold;
+													.margin5-bottom;
+												}
+												span{
+													.font-14;
+													.nomargin;
+													.semiBold;
+												}
+										}
+
+								}
+						}
+				}
+
+				.owl-nav{
+					height: 42px;
+					.nomargin;
+					.margin20-top;
+					.relative;
+					.text-center;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @fontColor;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							margin: 0 10px;
+							.no-outline;
+							.rounded-corners(100px);
+							.cursorPointer;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @fontColor;
+									font-size: 30px;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-03{
+			padding: 30px 0;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+						padding: 20px;
+
+							.item_info{
+								.valign-top;
+
+									.item_infoData{
+										line-height: 21px;
+										min-height: 100px;
+									}
+									.item_infoTitle{
+
+											.item_infoTitle_img{
+												width: 44px;
+													img{
+														height: 44px;
+														width: 44px;
+													}
+											}
+											.item_infoTitle_text{
+												h4, span{
+													.font-14;
+												}
+												span{
+													.font-12;
+												}
+											}
+
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+/* --------------------------------
+	testimonials type 04
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-04{
+		padding: 60px 0;
+		.relative;
+
+			.ts-testimonialsBlock{
+				.nopad;
+				.relative;
+				.block;
+
+				.testimonial_item{
+					.block;
+					.width100;
+
+						.item_info{
+
+								.item_infoData{
+									background-color: @primaryColor;
+									color: @white;
+									line-height: 24px;
+									min-height: 150px;
+									padding: 40px 30px;
+									.margin20-bottom;
+									.text-center;
+									.block;
+									.font-14;
+									.rounded-corners(5px);
+								}
+								.item_infoTitle{
+									.block;
+										.item_infoTitle_img{
+											border: 2px solid @primaryColor;
+											height: 68px;
+											width: 68px;
+											margin: 0 auto 10px;
+											.block;
+											.relative;
+											.rounded-corners(100px);
+												img{
+													height: 64px;
+													width: 64px;
+													.block;
+													.rounded-corners(100px);
+												}
+										}
+										.item_infoTitle_text{
+											.block;
+											.text-center;
+
+												h4, span{
+													color: @fontColor;
+													.block;
+													.font-14;
+													.bold;
+													.nomargin;
+												}
+												span{
+													.font-12;
+													.nomargin;
+													.semiBold;
+												}
+										}
+
+								}
+						}
+				}
+
+				.owl-nav{
+					height: 42px;
+					.nomargin;
+					.margin20-top;
+					.relative;
+					.text-center;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @fontColor;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							margin: 0 10px;
+							.no-outline;
+							.rounded-corners(100px);
+							.cursorPointer;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @fontColor;
+									font-size: 30px;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-04{
+			padding: 30px 0;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+
+							.item_info{
+
+									.item_infoData{
+										line-height: 21px;
+										min-height: 100px;
+										padding: 20px;
+									}
 							}
 					}
 
