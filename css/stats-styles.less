@@ -1,0 +1,72 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Stats Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Stats type 01
+----------------------------------- */
+
+.ts-stats{
+  &.type-01{
+    background-color: @white;
+    .relative;
+
+      .stats_block{
+        border: 1px solid #eee;
+        padding: 40px 0;
+        display: table;
+        table-layout: fixed;
+        .width100;
+
+          .block_section{
+            display: table-cell;
+            padding: 0 10px;
+            .valign-top;
+            .text-center;
+
+              .s-title{
+                color: @primaryColor;
+                font-size: 36px;
+                line-height: 49px;
+                .block;
+                .margin5-bottom;
+                .bold;
+              }
+              .s-subtitle{
+                color: @fontColor;
+                line-height: 24px;
+                .block;
+                .font-18;
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-stats{
+    &.type-01{
+
+        .stats_block{
+          padding: 20px 0;
+          .block;
+
+            .block_section{
+              width: calc(50% - 20px);
+              margin:20px 0;
+              .inlineblock;
+
+                .s-title{
+                  line-height: 26px;
+                  .font-22;
+                }
+                .s-subtitle{
+                  line-height: 16px;
+                  .font-12;
+                }
+            }
+        }
+    }
+  }
+}

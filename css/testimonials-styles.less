@@ -689,3 +689,227 @@ $$$$$$$$$$$$$$$$$$$$   testimonials Styles  $$$$$$$$$$$$$$$$$$
 
 	}
 }
+
+/* --------------------------------
+	testimonials type 05
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-05{
+		padding: 60px 0;
+		.relative;
+
+			.ts-testimonialsBlock{
+				.nopad;
+				.relative;
+				.block;
+
+				.testimonial_item{
+					border: 1px solid @primaryColor;
+					padding: 40px 30px;
+					.rounded-corners(5px);
+
+						.item_info{
+								.item_infoData{
+									color: @fontColor;
+									line-height: 24px;
+									min-height: 150px;
+									.margin20-bottom;
+									.text-center;
+									.block;
+									.font-14;
+								}
+								.item_infoTitle{
+									.block;
+										.item_infoTitle_img{
+											border: 2px solid @primaryColor;
+											height: 68px;
+											width: 68px;
+											margin: 0 auto 10px;
+											.block;
+											.relative;
+											.rounded-corners(100px);
+												img{
+													height: 64px;
+													width: 64px;
+													.block;
+													.rounded-corners(100px);
+												}
+										}
+										.item_infoTitle_text{
+											.block;
+											.text-center;
+
+												h4, span{
+													color: @fontColor;
+													.block;
+													.font-14;
+													.bold;
+													.nomargin;
+												}
+												span{
+													.font-12;
+													.nomargin;
+													.semiBold;
+												}
+										}
+
+								}
+						}
+				}
+
+				.owl-nav{
+					height: 42px;
+					.nomargin;
+					.margin20-top;
+					.relative;
+					.text-center;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @fontColor;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							margin: 0 10px;
+							.no-outline;
+							.rounded-corners(100px);
+							.cursorPointer;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @fontColor;
+									font-size: 30px;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-05{
+			padding: 30px 0;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+						padding: 20px;
+
+							.item_info{
+
+									.item_infoData{
+										line-height: 21px;
+										min-height: 100px;
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+
+/* --------------------------------
+	testimonials type 06
+----------------------------------- */
+
+.ts-testimonials{
+	&.type-06{
+		padding: 60px 0;
+		.relative;
+
+				.testimonial_item{
+					margin-bottom: 60px;
+					.nopad;
+
+						.item_info{
+								.item_infoData{
+									color: @fontColor;
+									line-height: 24px;
+									.block;
+									.font-14;
+								}
+								.item_infoTitle{
+									display: table;
+									table-layout: fixed;
+									margin-bottom: 30px;
+									.width100;
+
+										.item_infoTitle_img{
+											display: table-cell;
+											width: 64px;
+											.relative;
+												img{
+													height: 64px;
+													width: 64px;
+													.block;
+													.rounded-corners(100px);
+												}
+										}
+										.item_infoTitle_text{
+											display: table-cell;
+											.width100;
+											.valign-middle;
+											.pad20-left;
+
+												h4, span{
+													color: @primaryColor;
+													margin: 0 0 5px;
+													.block;
+													.font-18;
+													.bold;
+													.margin5-bottom;
+												}
+												span{
+													color: @fontColor;
+													.font-14;
+													.nomargin;
+													.semiBold;
+												}
+										}
+
+								}
+						}
+				}
+
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-testimonials{
+		&.type-06{
+			padding: 30px 0;
+
+				.ts-testimonialsBlock{
+					.nopad;
+
+					.testimonial_item{
+							.item_info{
+									.item_infoData{
+										line-height: 21px;
+										min-height: 100px;
+										padding: 20px;
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
