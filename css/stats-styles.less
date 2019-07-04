@@ -70,3 +70,224 @@ $$$$$$$$$$$$$$$$$$$$   Stats Styles  $$$$$$$$$$$$$$$$$$
     }
   }
 }
+
+/* --------------------------------
+	Stats type 02
+----------------------------------- */
+
+.ts-stats{
+  &.type-02{
+    background-color: @primaryColor;
+    .relative;
+
+      .stats_block{
+        padding: 40px 0;
+        display: table;
+        table-layout: fixed;
+        .width100;
+
+          .block_section{
+            display: table-cell;
+            padding: 0 10px;
+            .valign-top;
+            .text-center;
+
+              .s-title{
+                color: @white;
+                font-size: 36px;
+                line-height: 49px;
+                .block;
+                .margin5-bottom;
+                .bold;
+              }
+              .s-subtitle{
+                color: @white;
+                line-height: 24px;
+                .block;
+                .font-18;
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-stats{
+    &.type-02{
+
+        .stats_block{
+          padding: 20px 0;
+          .block;
+
+            .block_section{
+              width: calc(50% - 20px);
+              margin:20px 0;
+              .inlineblock;
+
+                .s-title{
+                  line-height: 26px;
+                  .font-22;
+                }
+                .s-subtitle{
+                  line-height: 16px;
+                  .font-12;
+                }
+            }
+        }
+    }
+  }
+}
+
+
+/* --------------------------------
+	Stats type 03
+----------------------------------- */
+
+.ts-stats{
+  &.type-03{
+    padding: 40px 0;
+    background-color: #F0F0F0;
+    .relative;
+
+      .stats_img{
+        img{
+          .width100;
+        }
+      }
+      .stats_block{
+        .nopad;
+        .block;
+
+          .block_section{
+            padding: 0 10px;
+            margin-bottom: 50px;
+            width: calc(50% - 20px);
+            .inlineblock;
+
+              .s-title{
+                color: @primaryColor;
+                font-size: 36px;
+                line-height: 49px;
+                .block;
+                .margin5-bottom;
+                .bold;
+              }
+              .s-subtitle{
+                color: @fontColor;
+                line-height: 24px;
+                .block;
+                .font-18;
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-stats{
+    &.type-03{
+
+      .stats_img{
+        .margin20-bottom;
+      }
+        .stats_block{
+          .block;
+
+            .block_section{
+
+                .s-title{
+                  line-height: 26px;
+                  .font-22;
+                }
+                .s-subtitle{
+                  line-height: 16px;
+                  .font-12;
+                }
+            }
+        }
+    }
+  }
+}
+
+/* --------------------------------
+	Stats type 04
+----------------------------------- */
+
+.ts-stats{
+  &.type-04{
+    background-image: url('../images/3x1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .relative;
+
+      &::before{
+        background-color: rgba(0,0,0,0.5);
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: 3;
+        .width100;
+        .height100;
+        .absolute;
+      }
+
+      .stats_block{
+        padding: 100px 0;
+        display: table;
+        table-layout: fixed;
+        z-index: 4;
+        .width100;
+        .relative;
+
+          .block_section{
+            display: table-cell;
+            padding: 0 10px;
+            .valign-top;
+            .text-center;
+
+              .s-title{
+                color: @white;
+                font-size: 36px;
+                line-height: 49px;
+                .block;
+                .margin5-bottom;
+                .bold;
+              }
+              .s-subtitle{
+                color: @white;
+                line-height: 24px;
+                .block;
+                .font-18;
+              }
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-stats{
+    &.type-04{
+
+        .stats_block{
+          padding: 20px 0;
+          .block;
+
+            .block_section{
+              width: calc(50% - 20px);
+              margin:20px 0;
+              .inlineblock;
+
+                .s-title{
+                  line-height: 26px;
+                  .font-22;
+                }
+                .s-subtitle{
+                  line-height: 16px;
+                  .font-12;
+                }
+            }
+        }
+    }
+  }
+}
