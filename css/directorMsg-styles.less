@@ -1,0 +1,507 @@
+@import "./utilities.less";
+
+
+
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Director Message Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Director Message type 01
+----------------------------------- */
+
+.ts-messageBox{
+	&.type-01{
+		background-color: @secondaryColor;
+		padding: 70px 0;
+		.relative;
+
+			.ts-messageBoxBlock{
+				.relative;
+				.block;
+				.nopad;
+
+				.messageBox_item{
+					display: table;
+					table-layout: fixed;
+					.width100;
+
+						.item_img{
+							display: table-cell;
+							width: 207px;
+							.valign-middle;
+								img{
+									max-width: 207px;
+									.block;
+								}
+						}
+
+						.item_info{
+							padding-left: 32px;
+							.valign-middle;
+
+								.item_infoData{
+									margin-bottom: 24px;
+									.block;
+
+									h3{
+										font-size: 24px;
+										line-height: 33px;
+										.block;
+										.bold;
+										.margin20-bottom;
+									}
+									span{
+										color: @fontColor;
+										line-height: 22px;
+										.block;
+										.font-16;
+										.margin10-bottom;
+									}
+								}
+								.item_infoTitle{
+									h4, span{
+										color: @fontColor;
+										.block;
+										.font-14;
+										.bold;
+										.margin0-bottom;
+									}
+									span{
+										.font-12;
+										.nomargin;
+										.semiBold;
+									}
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-messageBox{
+		&.type-01{
+			padding: 30px 0;
+			.text-center;
+
+				.ts-messageBoxBlock{
+					.nopad;
+
+					.messageBox_item{
+						.block;
+
+							.item_img{
+								height: 150px;
+								width: 150px;
+								margin: 0 auto 20px;
+								.block;
+									img{
+										max-width: 150px;
+									}
+							}
+
+							.item_info{
+								.nopad;
+									.item_infoData{
+										.margin15-bottom;
+										h3{
+											line-height: 20px;
+											.font-16;
+											.margin10-bottom;
+										}
+										span{
+											line-height: 18px;
+											.font-14;
+										}
+									}
+									.item_infoTitle{
+										h4, span{
+											.margin5-bottom;
+											.font-16;
+										}
+										span{
+											.font-12;
+											.nomargin;
+										}
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+
+/* --------------------------------
+	Director message type 02
+----------------------------------- */
+
+.ts-messageBox{
+	&.type-02{
+		.relative;
+
+			.ts-messageBoxBlock{
+				padding: 0 45px;
+				.relative;
+				.block;
+
+				.messageBox_item{
+					background-color: @secondaryColor;
+					display: table;
+					table-layout: fixed;
+					margin: 0 35px;
+					padding: 60px;
+
+						.item_img{
+							display: table-cell;
+							width: 201px;
+							.valign-middle;
+								img{
+									max-width: 201px;
+									.block;
+									.rounded-corners(100%);
+								}
+						}
+
+						.item_info{
+							.pad20-left;
+							.valign-middle;
+
+								.item_infoData{
+									margin-bottom: 24px;
+									.block;
+
+										h3{
+											font-size: 24px;
+											line-height: 33px;
+											.block;
+											.bold;
+											.margin20-bottom;
+										}
+										span{
+											color: @fontColor;
+											line-height: 22px;
+											.block;
+											.font-16;
+											.margin10-bottom;
+										}
+								}
+								.item_infoTitle{
+									h4, span{
+										color: @fontColor;
+										.block;
+										.font-20;
+										.bold;
+										.margin5-bottom;
+									}
+									span{
+										.font-14;
+										.nomargin;
+										.semiBold;
+									}
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-messageBox{
+		&.type-02{
+			padding: 30px 0;
+			.text-center;
+
+				.ts-messageBoxBlock{
+					.nopad;
+
+					.messageBox_item{
+						.block;
+						.nomargin;
+						.pad20;
+
+							.item_img{
+								height: 150px;
+								width: 150px;
+								margin: 0 auto 20px;
+								.block;
+									img{
+										max-width: 150px;
+									}
+							}
+
+							.item_info{
+								.nopad;
+									.item_infoData{
+										.margin15-bottom;
+										h3{
+											line-height: 20px;
+											.font-16;
+											.margin10-bottom;
+										}
+										span{
+											line-height: 18px;
+											.font-14;
+										}
+									}
+									.item_infoTitle{
+										h4, span{
+											.margin5-bottom;
+											.font-16;
+										}
+										span{
+											.font-12;
+											.nomargin;
+										}
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
+
+
+/* --------------------------------
+	Director message type 03
+----------------------------------- */
+
+.ts-messageBox {
+  &.type-03 {
+    .relative;
+
+		.messageBox_item{
+
+			.item_img{
+				.block;
+				.pad15-bottom;
+					img{
+						.width100;
+						.block;
+					}
+			}
+
+			.item_info{
+				.pad20-left;
+				.valign-middle;
+
+					.item_infoData{
+						margin-bottom: 24px;
+						.block;
+
+						h3{
+							font-size: 24px;
+							line-height: 33px;
+							.block;
+							.bold;
+							.margin20-bottom;
+						}
+						span{
+							color: @fontColor;
+							line-height: 22px;
+							.block;
+							.font-16;
+							.margin10-bottom;
+						}
+					}
+					.item_infoTitle{
+						h4, span{
+							color: @fontColor;
+							margin: 0 0 10px;
+							.block;
+							.font-20;
+							.bold;
+							.margin5-bottom;
+						}
+						span{
+							.font-14;
+							.nomargin;
+							.semiBold;
+						}
+					}
+			}
+		}
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-messageBox {
+		&.type-03 {
+			.messageBox_item{
+
+				.item_info{
+					.nopad;
+
+						.item_infoData{
+							.margin10-bottom;
+
+								h3{
+									line-height: 21px;
+									.margin10-bottom;
+									.font-16;
+								}
+								span{
+									line-height: 20px;
+									.font-14;
+								}
+						}
+						.item_infoTitle{
+							h4, span{
+								.font-16;
+								.margin5-bottom;
+							}
+							span{
+								.font-12;
+							}
+						}
+				}
+			}
+
+		}
+	}
+}
+
+/* --------------------------------
+	Director message type 04
+----------------------------------- */
+
+.ts-messageBox{
+	&.type-04{
+		.relative;
+
+			.ts-messageBoxBlock{
+				padding: 0 45px;
+				.relative;
+				.block;
+
+				.messageBox_item{
+					background-color: @white;
+					display: table;
+					table-layout: fixed;
+					margin: 0 0 40px;
+					padding: 40px;
+					.box-shadow(0 5px 10px 0 rgba(0,0,0,0.1));
+					.rounded-corners(10px);
+
+						.item_img{
+							display: table-cell;
+							width: 300px;
+							.valign-middle;
+								img{
+									max-width: 300px;
+									.block;
+									.rounded-corners(5px);
+								}
+						}
+
+						.item_info{
+							padding-left: 40px;
+							.valign-middle;
+
+								.item_infoData{
+									margin-bottom: 24px;
+									.block;
+										h3{
+											font-size: 24px;
+											line-height: 33px;
+											.block;
+											.bold;
+											.margin20-bottom;
+										}
+										span{
+											color: @fontColor;
+											line-height: 22px;
+											.block;
+											.font-16;
+											.margin10-bottom;
+										}
+
+								}
+								.item_infoTitle{
+									h4, span{
+										color: @fontColor;
+										.block;
+										.font-20;
+										.bold;
+										.margin5-bottom;
+									}
+									span{
+										.font-14;
+										.nomargin;
+										.semiBold;
+									}
+								}
+						}
+				}
+
+			}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-messageBox{
+		&.type-04{
+			padding: 30px 0;
+			.text-center;
+
+				.ts-messageBoxBlock{
+					.nopad;
+
+					.messageBox_item{
+						.block;
+						.pad20;
+						.nomargin;
+
+							.item_img{
+								height: 150px;
+								width: 150px;
+								margin: 0 auto 20px;
+								.block;
+									img{
+										max-width: 150px;
+									}
+							}
+
+							.item_info{
+								.nopad;
+									.item_infoData{
+										.margin15-bottom;
+										span{
+											line-height: 18px;
+											.font-14;
+										}
+										h3{
+											line-height: 20px;
+											.font-16;
+											.margin10-bottom;
+										}
+									}
+									.item_infoTitle{
+										h4, span{
+											.margin5-bottom;
+											.font-16;
+										}
+										span{
+											.font-12;
+											.nomargin;
+										}
+									}
+							}
+					}
+
+				}
+		}
+
+	}
+}
