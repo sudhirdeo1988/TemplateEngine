@@ -1,0 +1,87 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   enquiry Form Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	enquiry Form type 01
+----------------------------------- */
+
+.ts-enquiryForm {
+  &.type-01 {
+    background-color: #EBEBEB;
+    padding: 60px 0;
+    .relative;
+
+      .ts-formBlock{
+        .relative;
+
+          .mainHeading{
+            color: @fontColor;
+            font-size: 36px;
+            line-height: 49px;
+            .nomargin;
+            .block;
+            .bold;
+          }
+          .subHeading{
+            color: #737373;
+            line-height: 19px;
+            .font-14;
+            .margin20-bottom;
+            .block;
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-courses {
+		&.type-01 {
+
+			.ts-courseBlock {
+				background-color: @white;
+				min-height: 100px;
+				.pad15;
+				.margin15-bottom;
+
+				.blockHeading {
+					line-height: 20px;
+					.font-14;
+					.margin10-bottom;
+				}
+				.blockInfo {
+					line-height: 18px;
+					.font-12;
+				}
+			}
+		}
+	}
+}
+
+.form-group{
+  margin-bottom: 24px;
+  .block;
+  .relative;
+
+    .ts-txtBox{
+      &.type-01{
+        border: 1px solid #e2e2e2;
+        background-color: @white;
+        color: @fontColor;
+        height: 54px;
+        line-height: 22px;
+        padding: 16px 19px;
+        outline: none;
+        .fontPrimary_body;
+        .font-16;
+        .block;
+        .width100;
+        .rounded-corners(4px);
+        .box-shadow(none);
+
+          &:focus{outline: none;}
+          &::placeholder{color: #cacaca;}
+      }
+    }
+}
