@@ -59,6 +59,120 @@ $$$$$$$$$$$$$$$$$$$$   enquiry Form Styles  $$$$$$$$$$$$$$$$$$
   }
 }
 
+/* --------------------------------
+	enquiry Form type 02
+----------------------------------- */
+
+.ts-enquiryForm {
+  &.type-02 {
+    background-color: #EBEBEB;
+    padding: 60px 0;
+    .relative;
+    .text-center;
+
+      .ts-formBlock{
+        .relative;
+
+          .mainHeading{
+            color: @fontColor;
+            font-size: 36px;
+            line-height: 49px;
+            .nomargin;
+            .block;
+            .bold;
+          }
+          .subHeading{
+            color: #737373;
+            line-height: 19px;
+            .font-14;
+            .margin20-bottom;
+            .block;
+          }
+      }
+      .ts-imageBlock{
+        .relative;
+
+          img{
+            .width100;
+            .block;
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-enquiryForm {
+    &.type-02 {
+      padding: 30px 0;
+
+        .ts-formBlock{
+
+            .mainHeading{
+              font-size: 24px;
+              line-height: 35px;
+            }
+        }
+    }
+  }
+}
+
+
+/* --------------------------------
+	enquiry Form type 03
+----------------------------------- */
+
+.ts-enquiryForm {
+  &.type-03 {
+    background-color: #EBEBEB;
+    padding: 60px 0;
+    .relative;
+
+      .ts-formBlock{
+        .relative;
+
+          .mainHeading{
+            color: @fontColor;
+            font-size: 36px;
+            line-height: 49px;
+            .nomargin;
+            .block;
+            .bold;
+          }
+          .subHeading{
+            color: #737373;
+            line-height: 19px;
+            .font-14;
+            .margin20-bottom;
+            .block;
+          }
+      }
+      .ts-imageBlock{
+        .relative;
+
+          img{
+            .width100;
+            .block;
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+	.ts-enquiryForm {
+    &.type-03 {
+      padding: 30px 0;
+
+        .ts-formBlock{
+
+            .mainHeading{
+              font-size: 24px;
+              line-height: 35px;
+            }
+        }
+    }
+  }
+}
+
 .form-group{
   margin-bottom: 24px;
   .block;
@@ -83,5 +197,26 @@ $$$$$$$$$$$$$$$$$$$$   enquiry Form Styles  $$$$$$$$$$$$$$$$$$
           &:focus{outline: none;}
           &::placeholder{color: #cacaca;}
       }
+
+      &.type-02{
+        border: 0;
+        border-bottom: 1px solid @primaryColor;
+        background-color: transparent;
+        color: @fontColor;
+        height: 44px;
+        line-height: 22px;
+        padding: 10px 0;
+        outline: none;
+        .fontPrimary_body;
+        .font-16;
+        .block;
+        .width100;
+        .rounded-corners(0);
+        .box-shadow(none);
+
+          &:focus{outline: none;}
+          &::placeholder{color: #cacaca;}
+      }
+
     }
 }

@@ -1,0 +1,207 @@
+@import "./utilities.less";
+
+/* ------------------------------
+			Component :: Owl Theme
+---------------------------------*/
+.owl-theme{
+	.owl-nav{
+		.no-outline;
+		.margin10-top;
+		.text-center;
+
+			& [class*='owl-']{
+				color: @white;
+				padding: 4px 7px;
+				background: #D6D6D6;
+				cursor: pointer;
+				.font-14;
+				.margin5;
+				.inlineblock;
+				.rounded-corners(3px);
+
+					&:hover {
+						background: #869791;
+						color: @white;
+						text-decoration: none;
+					}
+			}
+			.disabled {
+				opacity: 0.5;
+				cursor: default;
+			}
+			&.disabled + .owl-dots {
+				.margin20-top;
+			}
+	}
+
+	.owl-dots {
+		.no-outline;
+		.text-center;
+
+			.owl-dot {
+				.no-outline;
+				zoom: 1;
+				*display: inline;
+				.inlineblock;
+				.transition(all ease 0.3s);
+
+					span{
+						width: 7px;
+						height: 7px;
+						background: #D6D6D6;
+						-webkit-backface-visibility: visible;
+						.margin5;
+						.block;
+						.rounded-corners(30px);
+						.transition(all 200ms ease);
+					}
+					&.active,
+					&:hover{
+						span{
+							background-color: @primaryColor;
+						}
+					}
+			}
+	}
+}
+
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Content Slider $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Content Slider 01
+----------------------------------- */
+
+.ts-contentSlider{
+	&.type-01{
+		background-color: @white;
+		.relative;
+
+			.ts-contentSliderBlock{
+				.relative;
+
+					.slider_item{
+						background-size: cover;
+						background-repeat: no-repeat;
+						padding: 200px 0;
+						min-height: 200px;
+
+							.slider_info{
+								z-index: 4;
+								.relative;
+
+									.info_heading{
+										color: @white;
+										font-size: 36px;
+										line-height: 49px;
+										.block;
+										.bold;
+										.margin10-bottom;
+									}
+									.info_subHeading{
+										color: @white;
+										line-height: 27px;
+										.font-20;
+										.block;
+										.margin10-bottom;
+									}
+							}
+
+							&::before{
+								background-color: rgba(0,0,0,0.4);
+								content: '';
+								top: 0;
+								left: 0;
+								z-index: 3;
+								.absolute;
+								.height100;
+								.width100;
+							}
+					}
+			}
+
+
+				.owl-nav{
+					height: 42px;
+					top: 50%;
+					left: 0;
+					margin-top: -21px;
+					.absolute;
+					.width100;
+
+						.owl-prev,
+						.owl-next{
+							border: 1px solid @white;
+							height: 42px;
+							width: 42px;
+							opacity: 1;
+							.no-outline;
+							.rounded-corners(100px);
+							.nomargin;
+							.cursorPointer;
+							.relative;
+
+								&:hover{
+									.no-outline;
+									.bgTransparent;
+								}
+
+								.icon{
+									color: @white;
+									font-size: 30px;
+									line-height: 22px;
+									.inlineblock;
+									.valign-middle;
+								}
+						}
+						.owl-prev{.left; left: 40px;}
+						.owl-next{.right; right: 40px;}
+				}
+
+			}
+	}
+
+
+@media only screen and (max-width: 768px) {
+	.ts-contentSlider{
+		&.type-01{
+
+				.ts-contentSliderBlock{
+
+						.slider_item{
+							padding: 50px 40px;
+							min-height: 100px;
+
+								.slider_info{
+
+										.info_heading{
+											font-size: 24px;
+											line-height: 30px;
+										}
+										.info_subHeading{
+											line-height: 22px;
+											.font-16;
+										}
+								}
+						}
+				}
+
+					.owl-nav{
+							.owl-prev,
+							.owl-next{
+								height: 32px;
+								width: 32px;
+
+									.icon{
+										font-size: 25px;
+										line-height: 20px;
+									}
+							}
+							.owl-prev{left: 10px;}
+							.owl-next{right: 10px;}
+					}
+
+				}
+		}
+}

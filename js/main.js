@@ -109,4 +109,17 @@
           }
         });
 
+
+        /* -------- Content Slider ---------- ts-contentSliderBlock */
+        $(".ts-contentSliderBlock").owlCarousel({
+          items:1,
+          nav:true,
+          dots:false,
+          margin:0,
+          mouseDrag:true,
+          touchDrag:true,
+          pullDrag:true,
+          navText: ['<i class="icon ts-arrow-back"></i>','<i class="icon ts-arrow-forward"></i>']
+        });
+
 })(jQuery);
