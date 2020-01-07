@@ -1,0 +1,554 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Classroom Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Classroom type 01
+----------------------------------- */
+
+.ts-cleverClassRoom {
+  &.type-01{
+    .block;
+
+      .headingBlock{
+        margin-bottom: 55px;
+        .block;
+
+          .mainHeading{
+            .block;
+            .text-center;
+            .margin5-bottom;
+
+              .h_1{
+                color: @primaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+              }
+              .h_2{
+                color: @secondaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+                .bold;
+              }
+          }
+
+          .subHeading{
+            color: @fontColor;
+            line-height: 22px;
+            .font-16;
+            .block;
+            .text-center;
+          }
+    }
+
+    .profileListing{
+      padding-left: 120px;
+      min-height: 120px;
+      margin-bottom: 70px;
+      .relative;
+      .block;
+
+        .profileListing_pic{
+          height: 100px;
+          width: 100px;
+          top: 0;
+          left: 0;
+          .absolute;
+          .block;
+
+            img{
+              height: 100px;
+              width: 100px;
+              .block;
+            }
+        }
+
+        .profileListing_info{
+          .userTitle{
+            color: @fontColor;
+            line-height: 24px;
+            .block;
+            .margin10-bottom;
+            .font-18;
+            .bold;
+          }
+          .staticText{
+            color: @fontColor;
+            line-height: 22px;
+            .font-14;
+            .block;
+          }
+        }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-cleverClassRoom {
+    &.type-01{
+
+        .headingBlock{
+          margin-bottom: 35px;
+
+            .mainHeading{
+                .h_1,.h_2{
+                  font-size: 24px;
+                  line-height: 40px;
+                }
+            }
+
+            .subHeading{
+              line-height: 20px;
+              .font-14;
+            }
+      }
+
+      .profileListing{
+        padding-left: 80px;
+        min-height: 80px;
+        margin-bottom: 40px;
+
+          .profileListing_pic{
+            height: 60px;
+            width: 60px;
+
+              img{
+                height: 60px;
+                width: 60px;
+              }
+          }
+
+          .profileListing_info{
+            .userTitle{
+              line-height: 20px;
+              .font-14;
+              .bold;
+            }
+            .staticText{
+              line-height: 18px;
+              .font-12;
+            }
+          }
+
+      }
+
+    }
+  }
+}
+
+/* --------------------------------
+	Classroom type 02
+----------------------------------- */
+
+.ts-cleverClassRoom {
+  &.type-02{
+    .block;
+
+      .headingBlock{
+        margin-bottom: 55px;
+        .block;
+
+          .mainHeading{
+            .block;
+            .margin5-bottom;
+
+              .h_1{
+                color: @primaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+              }
+              .h_2{
+                color: @secondaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+                .bold;
+              }
+          }
+
+          .subHeading{
+            color: @fontColor;
+            line-height: 22px;
+            .font-16;
+            .block;
+          }
+    }
+
+    .profileListing{
+      min-height: 100px;
+      margin-bottom: 50px;
+      .relative;
+      .block;
+
+        .profileListing_pic{
+          height: 100px;
+          width: 100px;
+          .relative;
+          .block;
+          .margin15-bottom;
+
+            img{
+              height: 100px;
+              width: 100px;
+              .block;
+            }
+        }
+
+        .profileListing_info{
+          .userTitle{
+            color: @fontColor;
+            line-height: 24px;
+            .block;
+            .margin10-bottom;
+            .font-18;
+            .bold;
+          }
+          .staticText{
+            color: @fontColor;
+            line-height: 22px;
+            .font-14;
+            .block;
+          }
+        }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-cleverClassRoom {
+    &.type-02{
+
+        .headingBlock{
+          margin-bottom: 35px;
+          .text-center;
+
+            .mainHeading{
+                .h_1,.h_2{
+                  font-size: 24px;
+                  line-height: 40px;
+                }
+            }
+
+            .subHeading{
+              line-height: 20px;
+              .font-14;
+            }
+      }
+
+      .profileListing{
+        min-height: 80px;
+        margin-bottom: 40px;
+        .text-center;
+
+          .profileListing_pic{
+            height: 60px;
+            width: 60px;
+            margin: 0 auto 20px;
+
+              img{
+                height: 60px;
+                width: 60px;
+              }
+          }
+
+          .profileListing_info{
+            .userTitle{
+              line-height: 20px;
+              .font-14;
+              .bold;
+            }
+            .staticText{
+              line-height: 18px;
+              .font-12;
+            }
+          }
+
+      }
+
+    }
+  }
+}
+
+/* --------------------------------
+	Classroom type 03
+----------------------------------- */
+
+.ts-cleverClassRoom {
+  &.type-03{
+    .block;
+
+      .headingBlock{
+        margin-bottom: 55px;
+        .block;
+
+          .mainHeading{
+            .block;
+            .text-center;
+            .margin5-bottom;
+
+              .h_1{
+                color: @primaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+              }
+              .h_2{
+                color: @secondaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+                .bold;
+              }
+          }
+
+          .subHeading{
+            color: @fontColor;
+            line-height: 22px;
+            .font-16;
+            .block;
+            .text-center;
+          }
+    }
+
+    .profileListing{
+      background-color: @white;
+      .height100;
+      .rounded-corners(5px);
+      .box-shadow(0 5px 10px 0 rgba(0,0,0,0.1));
+      .relative;
+      .block;
+      .pad20;
+      .margin20-bottom;
+
+        .profileListing_pic{
+          height: 80px;
+          width: 80px;
+          margin: 0 auto 20px;
+          .block;
+
+            img{
+              height: 80px;
+              width: 80px;
+              .block;
+            }
+        }
+
+        .profileListing_info{
+          .text-center;
+            .userTitle{
+              color: @fontColor;
+              line-height: 24px;
+              .block;
+              .margin10-bottom;
+              .font-18;
+              .bold;
+            }
+            .staticText{
+              color: @fontColor;
+              line-height: 22px;
+              .font-14;
+              .block;
+            }
+        }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-cleverClassRoom {
+    &.type-03{
+
+        .headingBlock{
+          margin-bottom: 35px;
+
+            .mainHeading{
+                .h_1,.h_2{
+                  font-size: 24px;
+                  line-height: 40px;
+                }
+            }
+
+            .subHeading{
+              line-height: 20px;
+              .font-14;
+            }
+      }
+
+      .profileListing{
+
+          .profileListing_pic{
+            height: 60px;
+            width: 60px;
+
+              img{
+                height: 60px;
+                width: 60px;
+              }
+          }
+
+          .profileListing_info{
+            .userTitle{
+              line-height: 20px;
+              .font-14;
+              .bold;
+            }
+            .staticText{
+              line-height: 18px;
+              .font-12;
+            }
+          }
+
+      }
+
+    }
+  }
+}
+
+/* --------------------------------
+	Classroom type 04
+----------------------------------- */
+
+.ts-cleverClassRoom {
+  &.type-04{
+    background-image: url('../images/red_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    .block;
+
+      .headingBlock{
+        margin-bottom: 55px;
+        .block;
+
+          .mainHeading{
+            .block;
+            .text-center;
+            .margin5-bottom;
+
+              .h_1{
+                color: @primaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+              }
+              .h_2{
+                color: @secondaryColor;
+                font-size: 48px;
+                line-height: 65px;
+                .inlineblock;
+                .bold;
+              }
+          }
+
+          .subHeading{
+            color: @fontColor;
+            line-height: 22px;
+            .font-16;
+            .block;
+            .text-center;
+          }
+    }
+
+    .profileListing{
+      background-color: @white;
+      padding: 30px;
+      .height100;
+      .rounded-corners(5px);
+      .box-shadow(0 5px 10px 0 rgba(0,0,0,0.1));
+      .relative;
+      .block;
+
+        .profileListing_pic{
+          height: 80px;
+          width: 80px;
+          .margin20-bottom;
+          .block;
+
+            img{
+              height: 80px;
+              width: 80px;
+              .block;
+            }
+        }
+
+        .profileListing_info{
+            .userTitle{
+              color: @fontColor;
+              line-height: 24px;
+              .block;
+              .margin10-bottom;
+              .font-18;
+              .bold;
+            }
+            .staticText{
+              color: @fontColor;
+              line-height: 22px;
+              .font-14;
+              .block;
+              .margin0-bottom;
+            }
+        }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-cleverClassRoom {
+    &.type-04{
+      background-image: none;
+
+        .headingBlock{
+          margin-bottom: 35px;
+
+            .mainHeading{
+                .h_1,.h_2{
+                  font-size: 24px;
+                  line-height: 40px;
+                }
+            }
+
+            .subHeading{
+              line-height: 20px;
+              .font-14;
+            }
+      }
+
+      .profileListing{
+        .pad15;
+
+          .profileListing_pic{
+            height: 60px;
+            width: 60px;
+
+              img{
+                height: 60px;
+                width: 60px;
+              }
+          }
+
+          .profileListing_info{
+            .userTitle{
+              line-height: 20px;
+              .font-14;
+              .bold;
+            }
+            .staticText{
+              line-height: 18px;
+              .font-12;
+              .margin0-bottom;
+            }
+          }
+
+      }
+
+    }
+  }
+}
+
