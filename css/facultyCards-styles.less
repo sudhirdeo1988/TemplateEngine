@@ -1,0 +1,70 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Gallery Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Gallery type 01
+----------------------------------- */
+.ts-cleverFaculty {
+  background-color: #f9f9f9;
+  .facultyCard{
+    background-color: #fff;
+    box-sizing: border-box;
+    .box-shadow(0 5px 10px rgba(0,0,0,0.1));
+    .pad20;
+    .margin20-bottom;
+    .rounded-corners(5px);
+
+    .imageDiv{
+      width: 100%;
+      max-height: 215px;
+      .margin20-bottom;
+      .block;
+
+        img{
+          max-height: 215px;
+          width: 100%;
+        }
+    }
+    .titleDiv{
+      .block;
+      .text-center;
+
+        .m-title{
+          color: #5D5D5D;
+          font-size: 17px;
+          line-height: 23px;
+          .block;
+          .bold;
+          .margin10-bottom;
+        }
+        .s-title{
+          color: #5D5D5D;
+          font-size: 14px;
+          line-height: 22px;
+          .block;
+        }
+    }
+  }
+
+  &.type-02{
+    .facultyCard{
+      .nopad;
+      .rounded-corners(4px);
+
+      .imageDiv{
+        .nomargin;
+        .rounded-corners(4px 4px 0 0);
+
+          img{
+            max-height: 180px;
+            .rounded-corners(4px 4px 0 0);
+          }
+      }
+      .titleDiv{
+        padding: 20px 12px;
+      }
+    }
+  }
+}

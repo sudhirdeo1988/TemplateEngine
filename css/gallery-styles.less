@@ -1,0 +1,47 @@
+@import "./utilities.less";
+
+/* -----------------------------------------------------------
+$$$$$$$$$$$$$$$$$$$$   Gallery Styles  $$$$$$$$$$$$$$$$$$
+-------------------------------------------------------------- */
+/* --------------------------------
+	Gallery type 01
+----------------------------------- */
+.ts-cleverGallery {
+  .galleryItem{
+    .block;
+    .relative;
+    .margin20-bottom;
+
+      .imageDiv{
+        width: 100%;
+        max-height: 250px;
+        .block;
+
+          img{
+            max-height: 250px;
+            width: 100%;
+          }
+      }
+      .titleDiv{
+        background-color: #efefef;
+        padding: 10px;
+        line-height: 18px;
+        .text-center;
+        .fontPrimary_heading;
+        .font-14;
+        .bold;
+      }
+  }
+
+  &.type-02{
+    .headingText{
+      color: #5D5D5D;
+      line-height: 24px;
+      .block;
+      .text-center;
+      .font-14;
+      .margin20-bottom;
+    }
+  }
+
+}
