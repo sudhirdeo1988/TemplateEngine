@@ -1,0 +1,113 @@
+@import "./utilities.less";
+
+/* --------------------------------
+	Heading type 01
+----------------------------------- */
+.ts-heading{
+  .headingBlock{
+    margin-bottom: 65px;
+    .block;
+
+      .mainHeading{
+        .block;
+        .text-center;
+
+          .h_1{
+            color: @primaryColor;
+            font-size: 48px;
+            line-height: 60px;
+            .inlineblock;
+          }
+          .h_2{
+            color: @secondaryColor;
+            font-size: 48px;
+            line-height: 60px;
+            .inlineblock;
+            .bold;
+          }
+
+          &.c-1{
+            .h_3{
+              color: @primaryColor;
+              font-size: 48px;
+              line-height: 65px;
+              .block;
+              .bold;
+            }
+          }
+          &.c-2{
+            .h_3{
+              color: @secondaryColor;
+              font-size: 48px;
+              line-height: 65px;
+              .block;
+              .bold;
+            }
+          }
+      }
+
+
+      .subHeading{
+        color: @fontColor;
+        line-height: 22px;
+        .font-16;
+        .block;
+        .text-center;
+        .margin5-top;
+      }
+  }
+  &.type-01{
+    .headingBlock{
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      .relative;
+        &::before{
+          background-color: lighten(@black, 85%);
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 50%;
+          height: 3px;
+          width: 100px;
+          margin-left: -50px;
+        }
+        &.c-1{
+          &::before{
+            background-color: @primaryColor;
+          }
+        }
+        &.c-2{
+          &::before{
+            background-color:  @secondaryColor;
+          }
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ts-heading{
+    .headingBlock{
+      margin-bottom: 25px;
+        .mainHeading{
+            .h_1,
+            .h_2,
+            &.c-1 .h_3,
+            &.c-2 .h_3{
+              font-size: 28px;
+              line-height: 35px;
+            }
+        }
+        .subHeading{
+          line-height: 20px;
+          .font-14;
+        }
+    }
+    &.type-01{
+      .headingBlock{
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
